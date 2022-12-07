@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, CardHeader, CardBody, CardFooter, Box } from '@chakra-ui/react';
+import { Card,Flex, CardHeader, CardBody, CardFooter, Box,Stack,StackDivider } from '@chakra-ui/react';
 import { SimpleGrid,Heading,Text,Button } from '@chakra-ui/react';
 import { Container } from '@chakra-ui/react';
 import {
@@ -10,6 +10,7 @@ import {
     ModalFooter,
     ModalBody,
     ModalCloseButton,
+    useColorModeValue,
   } from '@chakra-ui/react'
 
 import { useDisclosure } from '@chakra-ui/react';
@@ -57,7 +58,27 @@ function SizeExample() {
     )
   }
 
-
+  interface FeatureProps {
+    text: string;
+    iconBg: string;
+    icon?: ReactElement;
+  }
+  const Feature = ({ text, icon, iconBg }: FeatureProps) => {
+    return (
+      <Stack direction={'row'} align={'center'}>
+        <Flex
+          w={8}
+          h={8}
+          align={'center'}
+          justify={'center'}
+          rounded={'full'}
+          bg={iconBg}>
+          {icon}
+        </Flex>
+        <Text fontWeight={600}>{text}</Text>
+      </Stack>
+    );
+  };
 
 const LatestProjects = () => {
     const { isOpen, onOpen, onClose } = useDisclosure()
@@ -86,19 +107,36 @@ const LatestProjects = () => {
                     onClick={() => handleSizeClick(size)}
                     key={size}
                     m={4}
-                >{`See More`}</Button>
+                >{`See More Details`}</Button>
                 ))}
                 <Modal onClose={onClose} size={size} isOpen={isOpen}>
                     <ModalOverlay />
                     <ModalContent>
-                    <ModalHeader>Modal Title</ModalHeader>
+                    <ModalHeader>OKUNOLA VILLA</ModalHeader>
                     <ModalCloseButton />
                     <ModalBody>
                     <Box className='container zoom-anim-dialogue w-100'>
                   <img className='w-100' src={image1} alt="" />
-                    <h1>Triangle Concrete House On Lake</h1>
-                    <p class="project-detail-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut. magna aliquam erat volutpat enim ad minim veniam. Duis autem vel eum iriure dolor in hendrerit in.</p>
-                    <ul class="project-detail-list text-dark">
+                  <Stack spacing={4}>
+            
+            <Heading color={'gray.500'} mt='20'>Triangle Concrete House On
+            <span style={{
+              color:'pink',
+              fontWeight:'800'
+            }}
+            >  Lake</span> </Heading>
+            <Text color={'gray.500'} fontSize={'lg'}>
+                For each project, we establish relationships with partners who we know will  help us create added value for your project. 
+                As well as bringing together the public and private sectors, we make sector-overarching links to gather knowledge and to learn from each other.
+            </Text>
+            <Stack
+              spacing={4}
+              divider={
+                <StackDivider
+                  borderColor={useColorModeValue('gray.100', 'gray.700')}
+                />
+              }>
+              <ul class="project-detail-list text-dark">
                         <li>
                         <span class="left">Clients:</span>
                         <span class="right">Ethan Hunt, John Doe</span>
@@ -120,6 +158,8 @@ const LatestProjects = () => {
                         <span class="right">$1 200 000</span>
                         </li>
                     </ul>
+            </Stack>
+          </Stack>
                   </Box>
                     </ModalBody>
                     <ModalFooter>

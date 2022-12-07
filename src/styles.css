@@ -34,5 +34,23 @@
     cursor: pointer;
     border: none !important;
   
+}
+
+
+.project-detail-list li {
+    border-bottom: 1px solid #e1e1e1;
+    padding-bottom: 0.6rem;
+    margin-top: 0.65rem;
+    overflow: hidden;
   }
+  
+  .project-detail-list li .left {
+    float: left;
+    font-weight: 600;
+  }
+  
+  .project-detail-list li .right {
+    float: right;
+  }
+
 
