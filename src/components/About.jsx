@@ -7,7 +7,6 @@ import {
     Text,
     Stack,
     StackDivider,
-    Icon,
     useColorModeValue,
   } from '@chakra-ui/react';
   
@@ -53,6 +52,7 @@ import {
               fontSize={'sm'}
               bg={useColorModeValue('pink.400', 'pink.400')}
               p={2}
+              mb={4}
               alignSelf={'flex-start'}
               rounded={'md'}>
               ABOUT US

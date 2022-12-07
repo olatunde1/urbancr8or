@@ -8,4 +8,31 @@
     text-align: center;
     background-color: red;
 }
+
+.latest{
+    /* background-image: url(./components/images/project3.jpg); */
+    background-repeat:no-repeat;
+    background-size: cover;
+    padding-bottom: 6rem;
+    object-fit: contain;
+}
+
+.wrap{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.eachCard {
+    background-color: transparent;
+    border: 1px solid #cee002 ;
+    color: #fff !important;
+  }
   
+  .eachCard :hover{
+    background-color: #cee002;
+    color: #000;
+    cursor: pointer;
+    border: none !important;
+  
+  }
+
