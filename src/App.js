@@ -1,16 +1,18 @@
-import React from 'react';
-import { ChakraProvider } from '@chakra-ui/react';
-import Navbar from './components/Navbar'
-import Banner from './components/Banner'
-import About from './components/About'
-import LatestProjects from './components/LatestProjects';
+import React from 'react'
+import {ChakraProvider } from '@chakra-ui/react'
+import Landing from './components/Landing';
+import { Routes,Route } from 'react-router-dom'
+
 function App() {
+
   return (
+    
     <ChakraProvider>
-      <Navbar />
-      <Banner />
-      <About />
-      <LatestProjects />
+        <>
+          <Routes>
+            <Route path="/" element={<Landing />} />
+          </Routes>
+        </>
     </ChakraProvider>
   );
 }

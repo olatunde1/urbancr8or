@@ -3,6 +3,20 @@
     width: 50px;
 }
 
+.navBarPage{
+    background-image: url(./components/images/new7.jpg);
+    height: 50rem;
+}
+
+.css-1ynfsgs {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 .Banner {
     font-family: sans-serif;
     text-align: center;
@@ -10,29 +24,34 @@
 }
 
 .latest{
-    /* background-image: url(./components/images/project3.jpg); */
+    background-image: url(./components/images/new7.jpg);
     background-repeat:no-repeat;
     background-size: cover;
-    padding-bottom: 6rem;
     object-fit: contain;
+    background-attachment: fixed;
+    filter: brightness(90%);
 }
-
+[data-overlay-dark], [data-overlay-light] {
+    position: relative;
+}
 .wrap{
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
 
 .eachCard {
-    background-color: transparent;
-    border: 1px solid #cee002 ;
+    background-color: #58492b!important;
+    border: 2px solid #c5a47e ;
     color: #fff !important;
+    transition: all .5s;
   }
   
   .eachCard :hover{
-    background-color: #cee002;
+    background-color: #c5a47e;
     color: #000;
     cursor: pointer;
     border: none !important;
+    transition: all .5s;
   
 }
 
@@ -44,13 +63,23 @@
     overflow: hidden;
   }
   
-  .project-detail-list li .left {
+.project-detail-list li .left {
     float: left;
     font-weight: 600;
-  }
+}
   
-  .project-detail-list li .right {
+.project-detail-list li .right {
     float: right;
-  }
+}
 
+.img{
+    width: 100%;
+    height: auto;
+}
+
+.aboutImg:hover {
+    transition: all 0.5s;
+    color: #c5a47e;
+    cursor: pointer;
+}
 

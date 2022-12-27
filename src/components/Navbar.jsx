@@ -19,26 +19,31 @@ import {
     HamburgerIcon,
     CloseIcon,
     ChevronDownIcon,
-    ChevronRightIcon,
+    ChatIcon,
+    PhoneIcon
   } from '@chakra-ui/icons';
-//   import logo from './images/logo.jpeg'
+  import logo from './images/logo.jpeg'
 
-  
+
+
   export default function WithSubnavigation() {
     const { isOpen, onToggle } = useDisclosure();
   
     return (
-      <Box>
+      <Box id='Home' className='navBarPage'>
         <Flex
-          bg={useColorModeValue('white', 'gray.800')}
-          color={useColorModeValue('gray.600', 'white')}
-          minH={'60px'}
+          bg={useColorModeValue('white', 'gray')}
+          color={useColorModeValue('black', 'black')}
+          minH={'90px'}
+          minW={'100%'}
+          zIndex={'1'}
           py={{ base: 2 }}
           px={{ base: 4 }}
           borderBottom={1}
           borderStyle={'solid'}
           borderColor={useColorModeValue('gray.200', 'gray.900')}
-          align={'center'}>
+          align={'center'}
+          position={'fixed'}>
           <Flex
             flex={{ base: 1, md: 'auto' }}
             ml={{ base: -2 }}
@@ -56,9 +61,10 @@ import {
             <Text
               textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
               fontFamily={'heading'}
+              justify={'center'}
               align={'center'}
               color={useColorModeValue('gray.800', 'white')}>
-              {/* <img className='logo' src={logo} alt="logo" srcset="" /> */}
+              <img className='logo' src={logo} width={50} height={50} alt="logo" srcset="" />
             </Text>
   
             <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
@@ -70,26 +76,27 @@ import {
             flex={{ base: 1, md: 0 }}
             justify={'flex-end'}
             direction={'row'}
-            spacing={6}>
+            spacing={4}>
             <Button
               as={'a'}
               fontSize={'sm'}
               fontWeight={400}
               variant={'link'}
               href={'#'}>
-              Contact Us
+              Contact Us &nbsp; <Icon as={PhoneIcon} />
             </Button>
             <Button
-              display={{ base: 'none', md: 'inline-flex' }}
+              display={{ base: 'display', md: 'inline-flex' }}
               fontSize={'sm'}
               fontWeight={600}
-              color={'white'}
-              bg={'pink.400'}
+              color={'green'}
+              bg={'white'}
               href={'#'}
               _hover={{
-                bg: 'pink.300',
+                bg: 'none',
+                color: 'none',
               }}>
-              Chat us
+              <a href='https://api.whatsapp.com/send?phone=+2348035331782&text=I will like to have a discussion with your company"'>Chat us &nbsp; <Icon color={'green'} w={5} h={5} as={ChatIcon} /></a>
             </Button>
           </Stack>
         </Flex>
@@ -148,7 +155,7 @@ import {
     );
   };
   
-  const DesktopSubNav = ({ label, href, subLabel }: NavItem) => {
+  const DesktopSubNav = ({ label, href, subLabel }) => {
     return (
       <Link
         href={href}
@@ -156,12 +163,12 @@ import {
         display={'block'}
         p={2}
         rounded={'md'}
-        _hover={{ bg: useColorModeValue('pink.50', 'gray.900') }}>
+        _hover={{ bg: useColorModeValue('#c5a47e', 'gray.900') }}>
         <Stack direction={'row'} align={'center'}>
           <Box>
             <Text
               transition={'all .3s ease'}
-              _groupHover={{ color: 'pink.400' }}
+              _groupHover={{ color: 'white' }}
               fontWeight={500}>
               {label}
             </Text>
@@ -175,7 +182,7 @@ import {
             justify={'flex-end'}
             align={'center'}
             flex={1}>
-            <Icon color={'pink.400'} w={5} h={5} as={ChevronRightIcon} />
+            {/* <Icon color={'pink.400'} w={5} h={5} as={ChevronRightIcon} /> */}
           </Flex>
         </Stack>
       </Link>
@@ -195,7 +202,7 @@ import {
     );
   };
   
-  const MobileNavItem = ({ label, children, href }: NavItem) => {
+  const MobileNavItem = ({ label, children, href }) => {
     const { isOpen, onToggle } = useDisclosure();
   
     return (
@@ -245,17 +252,12 @@ import {
     );
   };
   
-  interface NavItem {
-    label: string;
-    subLabel?: string;
-    children?: Array<NavItem>;
-    href?: string;
-  }
+ 
   
-  const NAV_ITEMS: Array<NavItem> = [
+  const NAV_ITEMS = [
     {
       label: 'Home',
-      href: '#',
+      href: '#Home',
     //   children: [
     //     {
     //       label: 'Explore Design Work',
@@ -271,11 +273,12 @@ import {
     },
     {
       label: 'About',
+      href:'',
       children: [
         {
           label: 'Who we are',
           subLabel: 'We are a leading Architectural firm in Nigeria.',
-          href: '#',
+          href: '#About',
         },
         {
           label: 'Our Team',
@@ -286,10 +289,10 @@ import {
     },
     {
       label: 'Project',
-      href: '#',
+      href: '#LatestProject',
     },
     {
-      label: 'Gallery',
-      href: '#',
+      label: 'What our clients says',
+      href: '#testimony',
     },
   ];
