@@ -2,9 +2,9 @@ import React from 'react'
 import Navbar from './Navbar'
 import Footer from './Footer'
 import About from './About'
-import LatestProjects from './LatestProjects';
-import Testimony from './Testimony';
+import LatestProjects from './LatestProjects'
 import Contact from './Contact'
+import Testimony from './Testimony';
 
 const Landing = () => {
   return (

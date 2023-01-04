@@ -19,13 +19,13 @@ import {
     HamburgerIcon,
     CloseIcon,
     ChevronDownIcon,
-    ChatIcon,
     PhoneIcon
   } from '@chakra-ui/icons';
-  import logo from './images/logo.jpeg'
+  import logo from './images/logo.jpeg';
+  import { Show, Hide } from '@chakra-ui/react';
+  import whatssap from './images/WhatsApp_icon.png';
 
-
-
+  
   export default function WithSubnavigation() {
     const { isOpen, onToggle } = useDisclosure();
   
@@ -77,15 +77,18 @@ import {
             justify={'flex-end'}
             direction={'row'}
             spacing={4}>
+            <Box  display={{xs:'block', md:'none'}}>
+              <Button
+                as={'a'}
+                fontSize={'sm'}
+                fontWeight={400}
+                variant={'link'}
+                href={'#contact'}>
+                Contact Us &nbsp; <Icon as={PhoneIcon} />
+              </Button>
+            </Box>
             <Button
-              as={'a'}
-              fontSize={'sm'}
-              fontWeight={400}
-              variant={'link'}
-              href={'#'}>
-              Contact Us &nbsp; <Icon as={PhoneIcon} />
-            </Button>
-            <Button
+            className='ChatMsn'
               display={{ base: 'display', md: 'inline-flex' }}
               fontSize={'sm'}
               fontWeight={600}
@@ -96,7 +99,7 @@ import {
                 bg: 'none',
                 color: 'none',
               }}>
-              <a href='https://api.whatsapp.com/send?phone=+2348035331782&text=I will like to have a discussion with your company"'>Chat us &nbsp; <Icon color={'green'} w={5} h={5} as={ChatIcon} /></a>
+              <a href='https://api.whatsapp.com/send?phone=+2348035331782&text=I will like to request for your service"'>Chat us now &nbsp;<img className='invisible lg:visible cursor-pointer' src={whatssap} width={30} height={30} alt="Chat us Now" /></a> 
             </Button>
           </Stack>
         </Flex>

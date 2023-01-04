@@ -1,3 +1,4 @@
+
 .logo{
     height: 50px;
     width: 50px;
@@ -83,3 +84,27 @@
     cursor: pointer;
 }
 
+.ChatMsn a{
+    font-family: "Simplon Mono", "Courier New", Courier, monospace;
+    letter-spacing: 1px;
+    display: flex;
+    font-weight: 700;
+    font-size: 13px;
+    max-width: 100%;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    color: green;
+    border: 2px solid green;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 24px;
+    background-color: #fff;
+}
+
+.ChatMsn a:hover{
+    background-color: green;
+    color: #fff;
+}
+  
