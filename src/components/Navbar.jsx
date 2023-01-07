@@ -1,301 +1,117 @@
-import {
-    Box,
-    Flex,
-    Text,
-    IconButton,
-    Button,
-    Stack,
-    Collapse,
-    Icon,
-    Link,
-    Popover,
-    PopoverTrigger,
-    PopoverContent,
-    useColorModeValue,
-    useBreakpointValue,
-    useDisclosure,
-  } from '@chakra-ui/react';
-  import {
-    HamburgerIcon,
-    CloseIcon,
-    ChevronDownIcon,
-    PhoneIcon
-  } from '@chakra-ui/icons';
-  import logo from './images/logo.jpeg';
-  import { Show, Hide } from '@chakra-ui/react';
-  import whatssap from './images/WhatsApp_icon.png';
+import React from "react";
+import { Link, Box, Flex, Text, Button, Stack } from "@chakra-ui/react";
 
-  
-  export default function WithSubnavigation() {
-    const { isOpen, onToggle } = useDisclosure();
-  
-    return (
-      <Box id='Home' className='navBarPage'>
-        <Flex
-          bg={useColorModeValue('white', 'gray')}
-          color={useColorModeValue('black', 'black')}
-          minH={'90px'}
-          minW={'100%'}
-          zIndex={'1'}
-          py={{ base: 2 }}
-          px={{ base: 4 }}
-          borderBottom={1}
-          borderStyle={'solid'}
-          borderColor={useColorModeValue('gray.200', 'gray.900')}
-          align={'center'}
-          position={'fixed'}>
-          <Flex
-            flex={{ base: 1, md: 'auto' }}
-            ml={{ base: -2 }}
-            display={{ base: 'flex', md: 'none' }}>
-            <IconButton
-              onClick={onToggle}
-              icon={
-                isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
-              }
-              variant={'ghost'}
-              aria-label={'Toggle Navigation'}
-            />
-          </Flex>
-          <Flex flex={{ base:1 }} justify={{ base: 'center', md: 'start' }}>
-            <Text
-              textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
-              fontFamily={'heading'}
-              justify={'center'}
-              align={'center'}
-              color={useColorModeValue('gray.800', 'white')}>
-              <img className='logo' src={logo} width={50} height={50} alt="logo" srcset="" />
-            </Text>
-  
-            <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
-              <DesktopNav />
-            </Flex>
-          </Flex>
-  
-          <Stack
-            flex={{ base: 1, md: 0 }}
-            justify={'flex-end'}
-            direction={'row'}
-            spacing={4}>
-            <Box  display={{xs:'block', md:'none'}}>
-              <Button
-                as={'a'}
-                fontSize={'sm'}
-                fontWeight={400}
-                variant={'link'}
-                href={'#contact'}>
-                Contact Us &nbsp; <Icon as={PhoneIcon} />
-              </Button>
-            </Box>
-            <Button
-            className='ChatMsn'
-              display={{ base: 'display', md: 'inline-flex' }}
-              fontSize={'sm'}
-              fontWeight={600}
-              color={'green'}
-              bg={'white'}
-              href={'#'}
-              _hover={{
-                bg: 'none',
-                color: 'none',
-              }}>
-              <a href='https://api.whatsapp.com/send?phone=+2348035331782&text=I will like to request for your service"'>Chat us now &nbsp;<img className='invisible lg:visible cursor-pointer' src={whatssap} width={30} height={30} alt="Chat us Now" /></a> 
-            </Button>
-          </Stack>
-        </Flex>
-  
-        <Collapse in={isOpen} animateOpacity>
-          <MobileNav />
-        </Collapse>
-      </Box>
-    );
-  }
-  
-  const DesktopNav = () => {
-    const linkColor = useColorModeValue('gray.600', 'gray.200');
-    const linkHoverColor = useColorModeValue('gray.800', 'white');
-    const popoverContentBgColor = useColorModeValue('white', 'gray.800');
-  
-    return (
-      <Stack direction={'row'} spacing={4}>
-        {NAV_ITEMS.map((navItem) => (
-          <Box key={navItem.label}>
-            <Popover trigger={'hover'} placement={'bottom-start'}>
-              <PopoverTrigger>
-                <Link
-                  p={2}
-                  href={navItem.href ?? '#'}
-                  fontSize={'sm'}
-                  fontWeight={500}
-                  color={linkColor}
-                  _hover={{
-                    textDecoration: 'none',
-                    color: linkHoverColor,
-                  }}>
-                  {navItem.label}
-                </Link>
-              </PopoverTrigger>
-  
-              {navItem.children && (
-                <PopoverContent
-                  border={0}
-                  boxShadow={'xl'}
-                  bg={popoverContentBgColor}
-                  p={4}
-                  rounded={'xl'}
-                  minW={'sm'}>
-                  <Stack>
-                    {navItem.children.map((child) => (
-                      <DesktopSubNav key={child.label} {...child} />
-                    ))}
-                  </Stack>
-                </PopoverContent>
-              )}
-            </Popover>
-          </Box>
-        ))}
-      </Stack>
-    );
-  };
-  
-  const DesktopSubNav = ({ label, href, subLabel }) => {
-    return (
-      <Link
-        href={href}
-        role={'group'}
-        display={'block'}
-        p={2}
-        rounded={'md'}
-        _hover={{ bg: useColorModeValue('#c5a47e', 'gray.900') }}>
-        <Stack direction={'row'} align={'center'}>
-          <Box>
-            <Text
-              transition={'all .3s ease'}
-              _groupHover={{ color: 'white' }}
-              fontWeight={500}>
-              {label}
-            </Text>
-            <Text fontSize={'sm'}>{subLabel}</Text>
-          </Box>
-          <Flex
-            transition={'all .3s ease'}
-            transform={'translateX(-10px)'}
-            opacity={0}
-            _groupHover={{ opacity: '100%', transform: 'translateX(0)' }}
-            justify={'flex-end'}
-            align={'center'}
-            flex={1}>
-            {/* <Icon color={'pink.400'} w={5} h={5} as={ChevronRightIcon} /> */}
-          </Flex>
-        </Stack>
-      </Link>
-    );
-  };
-  
-  const MobileNav = () => {
-    return (
+import Logo from "./Logo";
+
+const NavBar = (props) => {
+  const [isOpen, setIsOpen] = React.useState(false);
+
+  const toggle = () => setIsOpen(!isOpen);
+
+  return (
+    <NavBarContainer {...props}>
+      <Logo
+        w="100px"
+        color={["white", "white", "primary.500", "primary.500"]}
+      />
+      <MenuToggle toggle={toggle} isOpen={isOpen} />
+      <MenuLinks isOpen={isOpen} />
+    </NavBarContainer>
+  );
+};
+
+const CloseIcon = () => (
+  <svg width="24" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+    <title>Close</title>
+    <path
+      fill="white"
+      d="M9.00023 7.58599L13.9502 2.63599L15.3642 4.04999L10.4142 8.99999L15.3642 13.95L13.9502 15.364L9.00023 10.414L4.05023 15.364L2.63623 13.95L7.58623 8.99999L2.63623 4.04999L4.05023 2.63599L9.00023 7.58599Z"
+    />
+  </svg>
+);
+
+const MenuIcon = () => (
+  <svg
+    width="24px"
+    viewBox="0 0 20 20"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="white"
+  >
+    <title>Menu</title>
+    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+  </svg>
+);
+
+const MenuToggle = ({ toggle, isOpen }) => {
+  return (
+    <Box display={{ base: "block", md: "none" }} onClick={toggle}>
+      {isOpen ? <CloseIcon /> : <MenuIcon />}
+    </Box>
+  );
+};
+
+const MenuItem = ({ children, isLast, to = "/", ...rest }) => {
+  return (
+    <Link href={to}>
+      <Text display="block" {...rest}>
+        {children}
+      </Text>
+    </Link>
+  );
+};
+
+const MenuLinks = ({ isOpen }) => {
+  return (
+    <Box
+      display={{ base: isOpen ? "block" : "none", md: "block" }}
+      flexBasis={{ base: "100%", md: "auto" }}
+    >
       <Stack
-        bg={useColorModeValue('white', 'gray.800')}
-        p={4}
-        display={{ md: 'none' }}>
-        {NAV_ITEMS.map((navItem) => (
-          <MobileNavItem key={navItem.label} {...navItem} />
-        ))}
+        spacing={8}
+        align="center"
+        justify={["center", "space-between", "flex-end", "flex-end"]}
+        direction={["column", "row", "row", "row"]}
+        pt={[4, 4, 0, 0]}
+      >
+        <MenuItem to="/">Home</MenuItem>
+        <MenuItem to="#About">About Us </MenuItem>
+        <MenuItem to="#LatestProject">Our Projects </MenuItem>
+        <MenuItem to="#contact">Contact </MenuItem>
+        <MenuItem to="/signup" isLast>
+          <Button
+            size="sm"
+            rounded="md"
+            color={["primary.500", "primary.500", "white", "white"]}
+            bg={["white", "white", "primary.700", "primary.700"]}
+            _hover={{
+              bg: ["primary.100", "primary.100", "primary.600", "primary.600"]
+            }}
+          >
+            Chat us Now
+          </Button>
+        </MenuItem>
       </Stack>
-    );
-  };
-  
-  const MobileNavItem = ({ label, children, href }) => {
-    const { isOpen, onToggle } = useDisclosure();
-  
-    return (
-      <Stack spacing={4} onClick={children && onToggle}>
-        <Flex
-          py={2}
-          as={Link}
-          href={href ?? '#'}
-          justify={'space-between'}
-          align={'center'}
-          _hover={{
-            textDecoration: 'none',
-          }}>
-          <Text
-            fontWeight={600}
-            color={useColorModeValue('gray.600', 'gray.200')}>
-            {label}
-          </Text>
-          {children && (
-            <Icon
-              as={ChevronDownIcon}
-              transition={'all .25s ease-in-out'}
-              transform={isOpen ? 'rotate(180deg)' : ''}
-              w={6}
-              h={6}
-            />
-          )}
-        </Flex>
-  
-        <Collapse in={isOpen} animateOpacity style={{ marginTop: '0!important' }}>
-          <Stack
-            mt={2}
-            pl={4}
-            borderLeft={1}
-            borderStyle={'solid'}
-            borderColor={useColorModeValue('gray.200', 'gray.700')}
-            align={'start'}>
-            {children &&
-              children.map((child) => (
-                <Link key={child.label} py={2} href={child.href}>
-                  {child.label}
-                </Link>
-              ))}
-          </Stack>
-        </Collapse>
-      </Stack>
-    );
-  };
-  
- 
-  
-  const NAV_ITEMS = [
-    {
-      label: 'Home',
-      href: '#Home',
-    //   children: [
-    //     {
-    //       label: 'Explore Design Work',
-    //       subLabel: 'Trending Design to inspire you',
-    //       href: '#',
-    //     },
-    //     {
-    //       label: 'New & Noteworthy',
-    //       subLabel: 'Up-and-coming Designers',
-    //       href: '#',
-    //     },
-    //   ],
-    },
-    {
-      label: 'About',
-      href:'',
-      children: [
-        {
-          label: 'Who we are',
-          subLabel: 'We are a leading Architectural firm in Nigeria.',
-          href: '#About',
-        },
-        {
-          label: 'Our Team',
-          subLabel: 'Meet our professionals',
-          href: '#',
-        },
-      ],
-    },
-    {
-      label: 'Project',
-      href: '#LatestProject',
-    },
-    {
-      label: 'What our clients says',
-      href: '#testimony',
-    },
-  ];
+    </Box>
+  );
+};
+
+const NavBarContainer = ({ children, ...props }) => {
+  return (
+    <Flex
+      as="nav"
+      align="center"
+      justify="space-between"
+      wrap="wrap"
+      w="100%"
+      mb={8}
+      p={8}
+      bg={["primary.700", "primary.700", "transparent", "transparent"]}
+      color={["white", "white", "primary.700", "primary.700"]}
+      {...props}
+    >
+      {children}
+    </Flex>
+  );
+};
+
+export default NavBar;
