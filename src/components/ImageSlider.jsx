@@ -1,15 +1,39 @@
-import { Image } from "@chakra-ui/react";
-import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-
-const ImageSlider = ({ slides }) => {
+import React from 'react'
+import {Box} from '@chakra-ui/react'
+import {Image, Stack,Heading,Text,Button, Card, CardHeader, CardBody, CardFooter } from '@chakra-ui/react'
+import banner from './images/interior.jpg'
+const ImageSlider = () => {
   return (
-    <Carousel infiniteLoop>
-      {slides.map((slide) => {
-        return <Image src={slide.image} height="auto" width="800px" />;
-      })}
-    </Carousel>
-  );
-};
+    <Card
+  direction={{ base: 'column', sm: 'row' }}
+  overflow='hidden'
+  variant='outline'
+>
+  <Image
+    objectFit='cover'
+    maxW={{ base: '100%', sm: '1034px' }}
+    src={banner}
+    alt='Caffe Latte'
+  />
 
-export default ImageSlider;
+  <Stack>
+    <CardBody className='interior' alignContent={'center'}>
+      <Heading
+      fontSize={'32px'}
+      // paddingLeft={16}
+      paddingBottom={8}
+      size='md'>Interior Design</Heading>
+      <Text
+      // paddingLeft={16}
+      // paddingTop={6}
+      >
+        Complexity represents intricacy of framework, stored information on how the system really works as well its very own make-up.
+      </Text>
+    </CardBody>
+  </Stack>
+</Card>
+
+  )
+}
+
+export default ImageSlider
