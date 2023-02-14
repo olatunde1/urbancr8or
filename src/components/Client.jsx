@@ -11,6 +11,7 @@ const client = () => {
     <div className='moveWrap' >
         <marquee  behavior="" direction="">
             <div className="move">
+                
                 <img src={Rccg} alt="" srcset="" />
                 <img src={Daylight} alt="" srcset="" />
                 <img src={Buono} alt="" srcset="" />

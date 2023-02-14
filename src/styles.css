@@ -12,7 +12,11 @@ html{
     width: 100%;
 }
 
-
+.moveWrap{
+    overflow: hidden;
+    margin-top: 20px;
+    border: 1px solid #f2f2f2;
+}
 .move{
     display: flex;
     flex-direction: row;
@@ -29,7 +33,7 @@ html{
 }
 .card1:hover{
     background-color: #f2f2f2;
-    transition: 0.9s ease;
+    transition: all .5s;
     cursor: pointer;
 }
 
@@ -60,7 +64,7 @@ html{
 
 .arch{
     word-wrap: break-word;
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 400;
     color: #fff;
     line-height: 1.1;
@@ -83,7 +87,7 @@ html{
 }
 
 .latest{
-    background-image: url(./components/images/new7.jpg);
+    /* background-image: url(./components/images/new7.jpg); */
     background-repeat:no-repeat;
     background-size: cover;
     object-fit: contain;
@@ -99,9 +103,9 @@ html{
 }
 
 .eachCard {
-    background-color: #58492b!important;
+    background-color: white!important;
     border: 2px solid #c5a47e ;
-    color: #fff !important;
+    color: #000000 !important;
     transition: all .5s;
   }
   

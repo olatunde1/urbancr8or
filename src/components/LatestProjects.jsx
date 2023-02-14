@@ -1,306 +1,593 @@
-import { useState } from 'react';
+import React from 'react'
+import { Card,Flex, CardHeader, CardBody, CardFooter, Box,Stack,StackDivider,Image } from '@chakra-ui/react';
+import { SimpleGrid,Heading,Text,Button } from '@chakra-ui/react';
+import { Container } from '@chakra-ui/react';
 import {
-  Box,
-  Heading,
-  Text,
-  Img,
-  Flex,
-  Center,
-  useColorModeValue,
-  HStack,
-} from '@chakra-ui/react';
-import { BsArrowUpRight, BsHeartFill, BsHeart } from 'react-icons/bs';
+    Modal,
+    ModalOverlay,
+    ModalContent,
+    ModalHeader,
+    ModalFooter,
+    ModalBody,
+    ModalCloseButton,
+    useColorModeValue,
+  } from '@chakra-ui/react'
 
-export default function PostWithLike() {
-  const [liked, setLiked] = useState(false);
+import { useDisclosure } from '@chakra-ui/react';
+import image1 from './images/new.jpg'
 
+
+
+function SizeExample() {
+    const { isOpen, onOpen, onClose } = useDisclosure()
+    const [size, setSize] = React.useState('full')
+  
+    const handleSizeClick = (newSize) => {
+      setSize(newSize)
+      onOpen()
+    }
+  
+    const sizes = ['full']
+  
+    return (
+      <>
+        {sizes.map((size) => (
+          <Button
+            onClick={() => handleSizeClick(size)}
+            key={size}
+            m={4}
+          >{`Open ${size} Modal`}</Button>
+        ))}
+  
+        <Modal onClose={onClose} size={size} isOpen={isOpen}>
+          <ModalOverlay />
+          <ModalContent>
+            <ModalHeader>Modal Title</ModalHeader>
+            <ModalCloseButton />
+            <ModalBody>
+              {/* <Lorem count={2} /> */}
+            </ModalBody>
+            <ModalFooter>
+              <Button onClick={onClose}>Close</Button>
+            </ModalFooter>
+          </ModalContent>
+        </Modal>
+      </>
+    )
+  }
+
+
+  const Feature = ({ text, icon, iconBg }) => {
+    return (
+      <Stack direction={'row'} align={'center'}>
+        <Flex
+          w={8}
+          h={8}
+          align={'center'}
+          justify={'center'}
+          rounded={'full'}
+          bg={iconBg}>
+          {icon}
+        </Flex>
+        <Text fontWeight={600}>{text}</Text>
+      </Stack>
+    );
+  };
+
+const LatestProjects = () => {
+    const { isOpen, onOpen, onClose } = useDisclosure()
+    const [size, setSize] = React.useState('md')
+    
+    const handleSizeClick = (newSize) => {
+        setSize(newSize)
+        onOpen()
+      }
+    const sizes = ['full']
   return (
-
-    <Flex py={6} direction={{ base: 'column', sm: 'row' }} >      
-      <Box
-        w="xs"
-        rounded={'sm'}
-        my={5}
-        mx={[0, 5]}
-        overflow={'hidden'}
-        bg="white"
-        border={'1px'}
-        borderColor="black"
-        boxShadow={useColorModeValue('6px 6px 0 black', '6px 6px 0 cyan')}>
-        <Box h={'200px'} borderBottom={'1px'} borderColor="black">
-          <Img
-            src={
-              'https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80'
-            }
-            roundedTop={'sm'}
-            objectFit="cover"
-            h="full"
-            w="full"
-            alt={'Blog Image'}
-          />
-        </Box>
-        <Box p={4}>
-          <Box
-            bg="black"
-            display={'inline-block'}
-            px={2}
-            py={1}
-            color="white"
-            mb={2}>
-            <Text fontSize={'xs'} fontWeight="medium">
-              React frryry jrjrjr
+    <Box id='LatestProject' className='latest' data-overlay-dark='6'>
+      <Container maxW='100%' color='#262626' centerContent>
+        <SimpleGrid className='wrap'  maxW='80%' py={12} spacing={8} templateColumns='repeat(auto-fill, minmax(300px, 300px))'>
+            <Card className='eachCard'>
+               <Box>
+               <CardHeader>
+                <Image src={image1}/>
+                <Heading size='md'> Triangle Concrete House On Lake</Heading>
+                </CardHeader>
+                <CardBody>
+                <Text>Project Type: &nbsp; Villa Residence</Text>
+                </CardBody>
+                <CardFooter>
+                {sizes.map((size) => (
+                <Button
+                    onClick={() => handleSizeClick(size)}
+                    key={size}
+                    m={4}
+                    color={'#c5a47e'}
+                    bgColor={'White'}
+                >{`See More Details`}</Button>
+                ))}
+                <Modal onClose={onClose} size={size} isOpen={isOpen}>
+                    <ModalOverlay />
+                    <ModalContent>
+                    <ModalHeader style={{
+                        fontWeight:'800',
+                    }}>OKUNOLA VILLA</ModalHeader>
+                    <ModalCloseButton />
+                    <ModalBody>
+                    <Box className='container zoom-anim-dialogue w-100'>
+                  <img className='w-100' src={image1} alt="" />
+                  <Stack spacing={4}>
+            
+            <Heading color={'gray.500'} mt='20'><span style={{
+              color:'pink',
+              fontWeight:'800'
+            }}>Triangle Concrete House</span> On Lake</Heading>
+            <Text color={'gray.500'} fontSize={'lg'}>
+                For each project, we establish relationships with partners who we know will  help us create added value for your project. 
+                As well as bringing together the public and private sectors, we make sector-overarching links to gather knowledge and to learn from each other.
             </Text>
-          </Box>
-          <Heading color={'black'} fontSize={'2xl'} noOfLines={1}>
-            React v18.0
-          </Heading>
-          <Text color={'gray.500'} noOfLines={2}>
-            In this post, we will give an overview of what is new in React 18,
-            and what it means for the future.
-          </Text>
-        </Box>
-        <HStack borderTop={'1px'} color="black">
-          <Flex
-            p={4}
-            alignItems="center"
-            justifyContent={'space-between'}
-            roundedBottom={'sm'}
-            cursor={'pointer'}
-            w="full">
-            <Text fontSize={'md'} fontWeight={'semibold'} >
-              View more
+            <Stack
+              spacing={4}
+              divider={
+                <StackDivider
+                  borderColor={useColorModeValue('gray.100', 'gray.700')}
+                />
+              }>
+              <ul class="project-detail-list text-dark">
+                        <li>
+                        <span class="left">Clients:</span>
+                        <span class="right">Ethan Hunt, John Doe</span>
+                        </li>
+                        <li>
+                        <span class="left">Completion:</span>
+                        <span class="right">February 5th, 2019</span>
+                        </li>
+                        <li>
+                        <span class="left">Project Type:</span>
+                        <span class="right">Villa, Residence</span>
+                        </li>
+                        <li>
+                        <span class="left">Architects:</span>
+                        <span class="right">Logan Cee, Paul</span>
+                        </li>
+                        <li>
+                        <span class="left">Budget:</span>
+                        <span class="right">$1 200 000</span>
+                        </li>
+                    </ul>
+            </Stack>
+          </Stack>
+                  </Box>
+                    </ModalBody>
+                    <ModalFooter>
+                        <marquee>Contemporary imaginations into <span style={{
+                                color:'pink',
+                                fontWeight:'800'
+                                }}>REALITY</span></marquee>
+                    </ModalFooter>
+                    </ModalContent>
+                </Modal>
+                </CardFooter>
+               </Box>
+            </Card>
+            <Card className='eachCard'>
+               <Box>
+               <CardHeader>
+                <Heading size='md'> Triangle Concrete House On Lake</Heading>
+                </CardHeader>
+                <CardBody>
+                <Text>Project Type: &nbsp; Villa Residence</Text>
+                </CardBody>
+                <CardFooter>
+                {sizes.map((size) => (
+                <Button
+                    onClick={() => handleSizeClick(size)}
+                    key={size}
+                    m={4}
+                    color={'#c5a47e'}
+                    bgColor={'White'}
+                >{`See More Details`}</Button>
+                ))}
+                <Modal onClose={onClose} size={size} isOpen={isOpen}>
+                    <ModalOverlay />
+                    <ModalContent>
+                    <ModalHeader style={{
+                        fontWeight:'800',
+                    }}>OKUNOLA VILLA</ModalHeader>
+                    <ModalCloseButton />
+                    <ModalBody>
+                    <Box className='container zoom-anim-dialogue w-100'>
+                  <img className='w-100' src={image1} alt="" />
+                  <Stack spacing={4}>
+            
+            <Heading color={'gray.500'} mt='20'><span style={{
+              color:'pink',
+              fontWeight:'800'
+            }}>Triangle Concrete House</span> On Lake</Heading>
+            <Text color={'gray.500'} fontSize={'lg'}>
+                For each project, we establish relationships with partners who we know will  help us create added value for your project. 
+                As well as bringing together the public and private sectors, we make sector-overarching links to gather knowledge and to learn from each other.
             </Text>
-            <BsArrowUpRight />
-          </Flex>
-          <Flex
-            p={4}
-            alignItems="center"
-            justifyContent={'space-between'}
-            roundedBottom={'sm'}
-            borderLeft={'1px'}
-            cursor="pointer"
-            onClick={() => setLiked(!liked)}>
-            {liked ? (
-              <BsHeartFill fill="red" fontSize={'24px'} />
-            ) : (
-              <BsHeart fontSize={'24px'} />
-            )}
-          </Flex>
-        </HStack>
-      </Box>
-      <Box
-        w="xs"
-        rounded={'sm'}
-        my={5}
-        mx={[0, 5]}
-        overflow={'hidden'}
-        bg="white"
-        border={'1px'}
-        borderColor="black"
-        boxShadow={useColorModeValue('6px 6px 0 black', '6px 6px 0 cyan')}>
-        <Box h={'200px'} borderBottom={'1px'} borderColor="black">
-          <Img
-            src={
-              'https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80'
-            }
-            roundedTop={'sm'}
-            objectFit="cover"
-            h="full"
-            w="full"
-            alt={'Blog Image'}
-          />
-        </Box>
-        <Box p={4}>
-          <Box
-            bg="black"
-            display={'inline-block'}
-            px={2}
-            py={1}
-            color="white"
-            mb={2}>
-            <Text fontSize={'xs'} fontWeight="medium">
-              React
+            <Stack
+              spacing={4}
+              divider={
+                <StackDivider
+                  borderColor={useColorModeValue('gray.100', 'gray.700')}
+                />
+              }>
+              <ul class="project-detail-list text-dark">
+                        <li>
+                        <span class="left">Clients:</span>
+                        <span class="right">Ethan Hunt, John Doe</span>
+                        </li>
+                        <li>
+                        <span class="left">Completion:</span>
+                        <span class="right">February 5th, 2019</span>
+                        </li>
+                        <li>
+                        <span class="left">Project Type:</span>
+                        <span class="right">Villa, Residence</span>
+                        </li>
+                        <li>
+                        <span class="left">Architects:</span>
+                        <span class="right">Logan Cee, Paul</span>
+                        </li>
+                        <li>
+                        <span class="left">Budget:</span>
+                        <span class="right">$1 200 000</span>
+                        </li>
+                    </ul>
+            </Stack>
+          </Stack>
+                  </Box>
+                    </ModalBody>
+                    <ModalFooter>
+                        <marquee>Contemporary imaginations into <span style={{
+                                color:'pink',
+                                fontWeight:'800'
+                                }}>REALITY</span></marquee>
+                    </ModalFooter>
+                    </ModalContent>
+                </Modal>
+                </CardFooter>
+               </Box>
+            </Card>
+            <Card className='eachCard'>
+               <Box>
+               <CardHeader>
+                <Heading size='md'> Triangle Concrete House On Lake</Heading>
+                </CardHeader>
+                <CardBody>
+                <Text>Project Type: &nbsp; Villa Residence</Text>
+                </CardBody>
+                <CardFooter>
+                {sizes.map((size) => (
+                <Button
+                    onClick={() => handleSizeClick(size)}
+                    key={size}
+                    m={4}
+                    color={'#c5a47e'}
+                    bgColor={'White'}
+                >{`See More Details`}</Button>
+                ))}
+                <Modal onClose={onClose} size={size} isOpen={isOpen}>
+                    <ModalOverlay />
+                    <ModalContent>
+                    <ModalHeader style={{
+                        fontWeight:'800',
+                    }}>OKUNOLA VILLA</ModalHeader>
+                    <ModalCloseButton />
+                    <ModalBody>
+                    <Box className='container zoom-anim-dialogue w-100'>
+                  <img className='w-100' src={image1} alt="" />
+                  <Stack spacing={4}>
+            
+            <Heading color={'gray.500'} mt='20'><span style={{
+              color:'pink',
+              fontWeight:'800'
+            }}>Triangle Concrete House</span> On Lake</Heading>
+            <Text color={'gray.500'} fontSize={'lg'}>
+                For each project, we establish relationships with partners who we know will  help us create added value for your project. 
+                As well as bringing together the public and private sectors, we make sector-overarching links to gather knowledge and to learn from each other.
             </Text>
-          </Box>
-          <Heading color={'black'} fontSize={'2xl'} noOfLines={1}>
-            React v18.0
-          </Heading>
-          <Text color={'gray.500'} noOfLines={2}>
-            In this post, we will give an overview of what is new in React 18,
-            and what it means for the future.
-          </Text>
-        </Box>
-        <HStack borderTop={'1px'} color="black">
-          <Flex
-            p={4}
-            alignItems="center"
-            justifyContent={'space-between'}
-            roundedBottom={'sm'}
-            cursor={'pointer'}
-            w="full">
-            <Text fontSize={'md'} fontWeight={'semibold'} >
-              View more
+            <Stack
+              spacing={4}
+              divider={
+                <StackDivider
+                  borderColor={useColorModeValue('gray.100', 'gray.700')}
+                />
+              }>
+              <ul class="project-detail-list text-dark">
+                        <li>
+                        <span class="left">Clients:</span>
+                        <span class="right">Ethan Hunt, John Doe</span>
+                        </li>
+                        <li>
+                        <span class="left">Completion:</span>
+                        <span class="right">February 5th, 2019</span>
+                        </li>
+                        <li>
+                        <span class="left">Project Type:</span>
+                        <span class="right">Villa, Residence</span>
+                        </li>
+                        <li>
+                        <span class="left">Architects:</span>
+                        <span class="right">Logan Cee, Paul</span>
+                        </li>
+                        <li>
+                        <span class="left">Budget:</span>
+                        <span class="right">$1 200 000</span>
+                        </li>
+                    </ul>
+            </Stack>
+          </Stack>
+                  </Box>
+                    </ModalBody>
+                    <ModalFooter>
+                        <marquee>Contemporary imaginations into <span style={{
+                                color:'pink',
+                                fontWeight:'800'
+                                }}>REALITY</span></marquee>
+                    </ModalFooter>
+                    </ModalContent>
+                </Modal>
+                </CardFooter>
+               </Box>
+            </Card>
+            <Card className='eachCard'>
+               <Box>
+               <CardHeader>
+                <Heading size='md'> Triangle Concrete House On Lake</Heading>
+                </CardHeader>
+                <CardBody>
+                <Text>Project Type: &nbsp; Villa Residence</Text>
+                </CardBody>
+                <CardFooter>
+                {sizes.map((size) => (
+                <Button
+                    onClick={() => handleSizeClick(size)}
+                    key={size}
+                    m={4}
+                    color={'#c5a47e'}
+                    bgColor={'White'}
+                >{`See More Details`}</Button>
+                ))}
+                <Modal onClose={onClose} size={size} isOpen={isOpen}>
+                    <ModalOverlay />
+                    <ModalContent>
+                    <ModalHeader style={{
+                        fontWeight:'800',
+                    }}>OKUNOLA VILLA</ModalHeader>
+                    <ModalCloseButton />
+                    <ModalBody>
+                    <Box className='container zoom-anim-dialogue w-100'>
+                  <img className='w-100' src={image1} alt="" />
+                  <Stack spacing={4}>
+            
+            <Heading color={'gray.500'} mt='20'><span style={{
+              color:'pink',
+              fontWeight:'800'
+            }}>Triangle Concrete House</span> On Lake</Heading>
+            <Text color={'gray.500'} fontSize={'lg'}>
+                For each project, we establish relationships with partners who we know will  help us create added value for your project. 
+                As well as bringing together the public and private sectors, we make sector-overarching links to gather knowledge and to learn from each other.
             </Text>
-            <BsArrowUpRight />
-          </Flex>
-          <Flex
-            p={4}
-            alignItems="center"
-            justifyContent={'space-between'}
-            roundedBottom={'sm'}
-            borderLeft={'1px'}
-            cursor="pointer"
-            onClick={() => setLiked(!liked)}>
-            {liked ? (
-              <BsHeartFill fill="red" fontSize={'24px'} />
-            ) : (
-              <BsHeart fontSize={'24px'} />
-            )}
-          </Flex>
-        </HStack>
-      </Box>
-      <Box
-        w="xs"
-        rounded={'sm'}
-        my={5}
-        mx={[0, 5]}
-        overflow={'hidden'}
-        bg="white"
-        border={'1px'}
-        borderColor="black"
-        boxShadow={useColorModeValue('6px 6px 0 black', '6px 6px 0 cyan')}>
-        <Box h={'200px'} borderBottom={'1px'} borderColor="black">
-          <Img
-            src={
-              'https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80'
-            }
-            roundedTop={'sm'}
-            objectFit="cover"
-            h="full"
-            w="full"
-            alt={'Blog Image'}
-          />
-        </Box>
-        <Box p={4}>
-          <Box
-            bg="black"
-            display={'inline-block'}
-            px={2}
-            py={1}
-            color="white"
-            mb={2}>
-            <Text fontSize={'xs'} fontWeight="medium">
-              React
+            <Stack
+              spacing={4}
+              divider={
+                <StackDivider
+                  borderColor={useColorModeValue('gray.100', 'gray.700')}
+                />
+              }>
+              <ul class="project-detail-list text-dark">
+                        <li>
+                        <span class="left">Clients:</span>
+                        <span class="right">Ethan Hunt, John Doe</span>
+                        </li>
+                        <li>
+                        <span class="left">Completion:</span>
+                        <span class="right">February 5th, 2019</span>
+                        </li>
+                        <li>
+                        <span class="left">Project Type:</span>
+                        <span class="right">Villa, Residence</span>
+                        </li>
+                        <li>
+                        <span class="left">Architects:</span>
+                        <span class="right">Logan Cee, Paul</span>
+                        </li>
+                        <li>
+                        <span class="left">Budget:</span>
+                        <span class="right">$1 200 000</span>
+                        </li>
+                    </ul>
+            </Stack>
+          </Stack>
+                  </Box>
+                    </ModalBody>
+                    <ModalFooter>
+                        <marquee>Contemporary imaginations into <span style={{
+                                color:'pink',
+                                fontWeight:'800'
+                                }}>REALITY</span></marquee>
+                    </ModalFooter>
+                    </ModalContent>
+                </Modal>
+                </CardFooter>
+               </Box>
+            </Card>
+            <Card className='eachCard'>
+               <Box>
+               <CardHeader>
+                <Heading size='md'> Triangle Concrete House On Lake</Heading>
+                </CardHeader>
+                <CardBody>
+                <Text>Project Type: &nbsp; Villa Residence</Text>
+                </CardBody>
+                <CardFooter>
+                {sizes.map((size) => (
+                <Button
+                    onClick={() => handleSizeClick(size)}
+                    key={size}
+                    m={4}
+                    color={'#c5a47e'}
+                    bgColor={'White'}
+                >{`See More Details`}</Button>
+                ))}
+                <Modal onClose={onClose} size={size} isOpen={isOpen}>
+                    <ModalOverlay />
+                    <ModalContent>
+                    <ModalHeader style={{
+                        fontWeight:'800',
+                    }}>OKUNOLA VILLA</ModalHeader>
+                    <ModalCloseButton />
+                    <ModalBody>
+                    <Box className='container zoom-anim-dialogue w-100'>
+                  <img className='w-100' src={image1} alt="" />
+                  <Stack spacing={4}>
+            
+            <Heading color={'gray.500'} mt='20'><span style={{
+              color:'pink',
+              fontWeight:'800'
+            }}>Triangle Concrete House</span> On Lake</Heading>
+            <Text color={'gray.500'} fontSize={'lg'}>
+                For each project, we establish relationships with partners who we know will  help us create added value for your project. 
+                As well as bringing together the public and private sectors, we make sector-overarching links to gather knowledge and to learn from each other.
             </Text>
-          </Box>
-          <Heading color={'black'} fontSize={'2xl'} noOfLines={1}>
-            React v18.0
-          </Heading>
-          <Text color={'gray.500'} noOfLines={2}>
-            In this post, we will give an overview of what is new in React 18,
-            and what it means for the future.
-          </Text>
-        </Box>
-        <HStack borderTop={'1px'} color="black">
-          <Flex
-            p={4}
-            alignItems="center"
-            justifyContent={'space-between'}
-            roundedBottom={'sm'}
-            cursor={'pointer'}
-            w="full">
-            <Text fontSize={'md'} fontWeight={'semibold'} >
-              View more
+            <Stack
+              spacing={4}
+              divider={
+                <StackDivider
+                  borderColor={useColorModeValue('gray.100', 'gray.700')}
+                />
+              }>
+              <ul class="project-detail-list text-dark">
+                        <li>
+                        <span class="left">Clients:</span>
+                        <span class="right">Ethan Hunt, John Doe</span>
+                        </li>
+                        <li>
+                        <span class="left">Completion:</span>
+                        <span class="right">February 5th, 2019</span>
+                        </li>
+                        <li>
+                        <span class="left">Project Type:</span>
+                        <span class="right">Villa, Residence</span>
+                        </li>
+                        <li>
+                        <span class="left">Architects:</span>
+                        <span class="right">Logan Cee, Paul</span>
+                        </li>
+                        <li>
+                        <span class="left">Budget:</span>
+                        <span class="right">$1 200 000</span>
+                        </li>
+                    </ul>
+            </Stack>
+          </Stack>
+                  </Box>
+                    </ModalBody>
+                    <ModalFooter>
+                        <marquee>Contemporary imaginations into <span style={{
+                                color:'pink',
+                                fontWeight:'800'
+                                }}>REALITY</span></marquee>
+                    </ModalFooter>
+                    </ModalContent>
+                </Modal>
+                </CardFooter>
+               </Box>
+            </Card>
+            <Card className='eachCard'>
+               <Box>
+               <CardHeader>
+                <Heading size='md'> Triangle Concrete House On Lake</Heading>
+                </CardHeader>
+                <CardBody>
+                <Text>Project Type: &nbsp; Aso Villa Residence</Text>
+                </CardBody>
+                <CardFooter>
+                {sizes.map((size) => (
+                <Button
+                    onClick={() => handleSizeClick(size)}
+                    key={size}
+                    m={4}
+                    color={'#c5a47e'}
+                    bgColor={'White'}
+                >{`See More Details`}</Button>
+                ))}
+                <Modal onClose={onClose} size={size} isOpen={isOpen}>
+                    <ModalOverlay />
+                    <ModalContent>
+                    <ModalHeader style={{
+                        fontWeight:'800',
+                    }}>OKUNOLA VILLA</ModalHeader>
+                    <ModalCloseButton />
+                    <ModalBody>
+                    <Box className='container zoom-anim-dialogue w-100'>
+                  <img className='w-100' src={image1} alt="" />
+                  <Stack spacing={4}>
+            
+            <Heading color={'gray.500'} mt='20'><span style={{
+              color:'pink',
+              fontWeight:'800'
+            }}>Triangle Concrete House</span> On Lake</Heading>
+            <Text color={'gray.500'} fontSize={'lg'}>
+                For each project, we establish relationships with partners who we know will  help us create added value for your project. 
+                As well as bringing together the public and private sectors, we make sector-overarching links to gather knowledge and to learn from each other.
             </Text>
-            <BsArrowUpRight />
-          </Flex>
-          <Flex
-            p={4}
-            alignItems="center"
-            justifyContent={'space-between'}
-            roundedBottom={'sm'}
-            borderLeft={'1px'}
-            cursor="pointer"
-            onClick={() => setLiked(!liked)}>
-            {liked ? (
-              <BsHeartFill fill="red" fontSize={'24px'} />
-            ) : (
-              <BsHeart fontSize={'24px'} />
-            )}
-          </Flex>
-        </HStack>
-      </Box>
-      <Box
-        w="xs"
-        rounded={'sm'}
-        my={5}
-        mx={[0, 5]}
-        overflow={'hidden'}
-        bg="white"
-        border={'1px'}
-        borderColor="black"
-        boxShadow={useColorModeValue('6px 6px 0 black', '6px 6px 0 cyan')}>
-        <Box h={'200px'} borderBottom={'1px'} borderColor="black">
-          <Img
-            src={
-              'https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80'
-            }
-            roundedTop={'sm'}
-            objectFit="cover"
-            h="full"
-            w="full"
-            alt={'Blog Image'}
-          />
-        </Box>
-        <Box p={4}>
-          <Box
-            bg="black"
-            display={'inline-block'}
-            px={2}
-            py={1}
-            color="white"
-            mb={2}>
-            <Text fontSize={'xs'} fontWeight="medium">
-              React
-            </Text>
-          </Box>
-          <Heading color={'black'} fontSize={'2xl'} noOfLines={1}>
-            React v18.0
-          </Heading>
-          <Text color={'gray.500'} noOfLines={2}>
-            In this post, we will give an overview of what is new in React 18,
-            and what it means for the future.
-          </Text>
-        </Box>
-        <HStack borderTop={'1px'} color="black">
-          <Flex
-            p={4}
-            alignItems="center"
-            justifyContent={'space-between'}
-            roundedBottom={'sm'}
-            cursor={'pointer'}
-            w="full">
-            <Text fontSize={'md'} fontWeight={'semibold'} >
-              View more
-            </Text>
-            <BsArrowUpRight />
-          </Flex>
-          <Flex
-            p={4}
-            alignItems="center"
-            justifyContent={'space-between'}
-            roundedBottom={'sm'}
-            borderLeft={'1px'}
-            cursor="pointer"
-            onClick={() => setLiked(!liked)}>
-            {liked ? (
-              <BsHeartFill fill="red" fontSize={'24px'} />
-            ) : (
-              <BsHeart fontSize={'24px'} />
-            )}
-          </Flex>
-        </HStack>
-      </Box>
-    </Flex>
-  );
+            <Stack
+              spacing={4}
+              divider={
+                <StackDivider
+                  borderColor={useColorModeValue('gray.100', 'gray.700')}
+                />
+              }>
+              <ul class="project-detail-list text-dark">
+                        <li>
+                        <span class="left">Clients:</span>
+                        <span class="right">Ethan Hunt, John Doe</span>
+                        </li>
+                        <li>
+                        <span class="left">Completion:</span>
+                        <span class="right">February 5th, 2019</span>
+                        </li>
+                        <li>
+                        <span class="left">Project Type:</span>
+                        <span class="right">Villa, Residence</span>
+                        </li>
+                        <li>
+                        <span class="left">Architects:</span>
+                        <span class="right">Logan Cee, Paul</span>
+                        </li>
+                        <li>
+                        <span class="left">Budget:</span>
+                        <span class="right">$1 200 000</span>
+                        </li>
+                    </ul>
+            </Stack>
+          </Stack>
+                  </Box>
+                    </ModalBody>
+                    <ModalFooter>
+                        <marquee>Contemporary imaginations into <span style={{
+                                color:'pink',
+                                fontWeight:'800'
+                                }}>REALITY</span></marquee>
+                    </ModalFooter>
+                    </ModalContent>
+                </Modal>
+                </CardFooter>
+               </Box>
+            </Card>
+         
+            
+            
+        </SimpleGrid>
+      </Container>
+    </Box>
+    
+  )
 }
+
+export default LatestProjects
