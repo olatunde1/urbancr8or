@@ -9,6 +9,8 @@ import Contact from './Contact'
 import Testimony from './Testimony'
 import ImageSlider from './ImageSlider'
 import SkillSet from './SkillSet'
+import Client from './Client'
+import '../../src/styles.css';
 
 
 const Landing = () => {
@@ -19,6 +21,7 @@ const Landing = () => {
           <About />
           <SkillSet />
           <ImageSlider />
+          <Client />
           <LatestProjects />
           <Testimony />
           <Contact />

@@ -1,5 +1,4 @@
 import React from 'react'
-import {Box} from '@chakra-ui/react'
 import {Image, Stack,Heading,Text,Button, Card, CardHeader, CardBody, CardFooter } from '@chakra-ui/react'
 import banner from './images/interior.jpg'
 const ImageSlider = () => {
