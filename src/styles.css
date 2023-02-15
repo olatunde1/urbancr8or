@@ -103,14 +103,14 @@ html{
 }
 
 .eachCard {
-    background-color: white!important;
-    border: 2px solid #c5a47e ;
+    background-color: white;
+    /* border: 2px solid #c5a47e ; */
     color: #000000 !important;
     transition: all .5s;
   }
   
   .eachCard :hover{
-    background-color: #c5a47e;
+    background-color: #f2f2f2;
     color: #000;
     cursor: pointer;
     border: none !important;

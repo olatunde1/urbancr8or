@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card,Flex, CardHeader, CardBody, CardFooter, Box,Stack,StackDivider,Image } from '@chakra-ui/react';
+import { Card,Flex, CardHeader,Divider,ButtonGroup, CardBody, CardFooter, Box,Stack,StackDivider,Image } from '@chakra-ui/react';
 import { SimpleGrid,Heading,Text,Button } from '@chakra-ui/react';
 import { Container } from '@chakra-ui/react';
 import {
@@ -85,20 +85,614 @@ const LatestProjects = () => {
     const sizes = ['full']
   return (
     <Box id='LatestProject' className='latest' data-overlay-dark='6'>
-      <Container maxW='100%' color='#262626' centerContent>
-        <SimpleGrid className='wrap'  maxW='80%' py={12} spacing={8} templateColumns='repeat(auto-fill, minmax(300px, 300px))'>
+      <Container maxW='100%' color='#ffffff' centerContent>
+        <SimpleGrid className='wrap'  maxW='80%' py={12} spacing={8} templateColumns='repeat(auto-fill, minmax(18rem, 2fr))'>
             <Card className='eachCard'>
                <Box>
-               <CardHeader>
-                <Image src={image1}/>
-                <Heading size='md'> Triangle Concrete House On Lake</Heading>
-                </CardHeader>
+               <Card maxW='sm'>
                 <CardBody>
-                <Text>Project Type: &nbsp; Villa Residence</Text>
+                  <Image
+                    src={image1}
+                    alt='Green double couch with wooden legs'
+                    borderRadius='lg'
+                  />
+                  <Stack mt='6' spacing='3'>
+                    <Heading size='md'>Living room Sofa</Heading>
+                    <Text>
+                      This sofa is perfect for modern tropical spaces.
+                    </Text>
+                    <Text color='blue.600' fontSize='2xl'>
+                      $450
+                    </Text>
+                  </Stack>
                 </CardBody>
+                <Divider />
                 <CardFooter>
                 {sizes.map((size) => (
                 <Button
+                    
+                    onClick={() => handleSizeClick(size)}
+                    key={size}
+                    m={4}
+                    color={'#fff'}
+                    bgColor={'blue.600'}
+                >{`See More Details`}</Button>
+                ))}
+                <Modal onClose={onClose} size={size} isOpen={isOpen}>
+                    <ModalOverlay />
+                    <ModalContent>
+                    <ModalHeader style={{
+                        fontWeight:'800',
+                    }}>OKUNOLA VILLA</ModalHeader>
+                    <ModalCloseButton />
+                    <ModalBody>
+                    <Box className='container zoom-anim-dialogue w-100'>
+                  <img className='w-100' src={image1} alt="" />
+                  <Stack spacing={4}>
+            
+            <Heading color={'gray.500'} mt='20'><span style={{
+              color:'pink',
+              fontWeight:'800'
+            }}>Triangle Concrete House</span> On Lake</Heading>
+            <Text color={'gray.500'} fontSize={'lg'}>
+                For each project, we establish relationships with partners who we know will  help us create added value for your project. 
+                As well as bringing together the public and private sectors, we make sector-overarching links to gather knowledge and to learn from each other.
+            </Text>
+            <Stack
+              spacing={4}
+              divider={
+                <StackDivider
+                  borderColor={useColorModeValue('gray.100', 'gray.700')}
+                />
+              }>
+              <ul class="project-detail-list text-dark">
+                        <li>
+                        <span class="left">Clients:</span>
+                        <span class="right">Ethan Hunt, John Doe</span>
+                        </li>
+                        <li>
+                        <span class="left">Completion:</span>
+                        <span class="right">February 5th, 2019</span>
+                        </li>
+                        <li>
+                        <span class="left">Project Type:</span>
+                        <span class="right">Villa, Residence</span>
+                        </li>
+                        <li>
+                        <span class="left">Architects:</span>
+                        <span class="right">Logan Cee, Paul</span>
+                        </li>
+                        <li>
+                        <span class="left">Budget:</span>
+                        <span class="right">$1 200 000</span>
+                        </li>
+                    </ul>
+            </Stack>
+          </Stack>
+                  </Box>
+                    </ModalBody>
+                    <ModalFooter>
+                        <marquee>Contemporary imaginations into <span style={{
+                                color:'pink',
+                                fontWeight:'800'
+                                }}>REALITY</span></marquee>
+                    </ModalFooter>
+                    </ModalContent>
+                </Modal>
+                </CardFooter>
+              </Card>
+                
+               </Box>
+            </Card>
+            <Card className='eachCard'>
+               <Box>
+               <Card maxW='sm'>
+                <CardBody>
+                  <Image
+                    src={image1}
+                    alt='Green double couch with wooden legs'
+                    borderRadius='lg'
+                  />
+                  <Stack mt='6' spacing='3'>
+                    <Heading size='md'>Living room Sofa</Heading>
+                    <Text>
+                      This sofa is perfect for modern tropical spaces.
+                    </Text>
+                    <Text color='blue.600' fontSize='2xl'>
+                      $450
+                    </Text>
+                  </Stack>
+                </CardBody>
+                <Divider />
+                <CardFooter>
+                {sizes.map((size) => (
+                <Button
+                    
+                    onClick={() => handleSizeClick(size)}
+                    key={size}
+                    m={4}
+                    color={'#fff'}
+                    bgColor={'blue.600'}
+                >{`See More Details`}</Button>
+                ))}
+                <Modal onClose={onClose} size={size} isOpen={isOpen}>
+                    <ModalOverlay />
+                    <ModalContent>
+                    <ModalHeader style={{
+                        fontWeight:'800',
+                    }}>OKUNOLA VILLA</ModalHeader>
+                    <ModalCloseButton />
+                    <ModalBody>
+                    <Box className='container zoom-anim-dialogue w-100'>
+                  <img className='w-100' src={image1} alt="" />
+                  <Stack spacing={4}>
+            
+            <Heading color={'gray.500'} mt='20'><span style={{
+              color:'pink',
+              fontWeight:'800'
+            }}>Triangle Concrete House</span> On Lake</Heading>
+            <Text color={'gray.500'} fontSize={'lg'}>
+                For each project, we establish relationships with partners who we know will  help us create added value for your project. 
+                As well as bringing together the public and private sectors, we make sector-overarching links to gather knowledge and to learn from each other.
+            </Text>
+            <Stack
+              spacing={4}
+              divider={
+                <StackDivider
+                  borderColor={useColorModeValue('gray.100', 'gray.700')}
+                />
+              }>
+              <ul class="project-detail-list text-dark">
+                        <li>
+                        <span class="left">Clients:</span>
+                        <span class="right">Ethan Hunt, John Doe</span>
+                        </li>
+                        <li>
+                        <span class="left">Completion:</span>
+                        <span class="right">February 5th, 2019</span>
+                        </li>
+                        <li>
+                        <span class="left">Project Type:</span>
+                        <span class="right">Villa, Residence</span>
+                        </li>
+                        <li>
+                        <span class="left">Architects:</span>
+                        <span class="right">Logan Cee, Paul</span>
+                        </li>
+                        <li>
+                        <span class="left">Budget:</span>
+                        <span class="right">$1 200 000</span>
+                        </li>
+                    </ul>
+            </Stack>
+          </Stack>
+                  </Box>
+                    </ModalBody>
+                    <ModalFooter>
+                        <marquee>Contemporary imaginations into <span style={{
+                                color:'pink',
+                                fontWeight:'800'
+                                }}>REALITY</span></marquee>
+                    </ModalFooter>
+                    </ModalContent>
+                </Modal>
+                </CardFooter>
+              </Card>
+                
+               </Box>
+            </Card>
+            <Card className='eachCard'>
+               <Box>
+               <Card maxW='sm'>
+                <CardBody>
+                  <Image
+                    src={image1}
+                    alt='Green double couch with wooden legs'
+                    borderRadius='lg'
+                  />
+                  <Stack mt='6' spacing='3'>
+                    <Heading size='md'>Living room Sofa</Heading>
+                    <Text>
+                      This sofa is perfect for modern tropical spaces.
+                    </Text>
+                    <Text color='blue.600' fontSize='2xl'>
+                      $450
+                    </Text>
+                  </Stack>
+                </CardBody>
+                <Divider />
+                <CardFooter>
+                {sizes.map((size) => (
+                <Button
+                    
+                    onClick={() => handleSizeClick(size)}
+                    key={size}
+                    m={4}
+                    color={'#fff'}
+                    bgColor={'blue.600'}
+                >{`See More Details`}</Button>
+                ))}
+                <Modal onClose={onClose} size={size} isOpen={isOpen}>
+                    <ModalOverlay />
+                    <ModalContent>
+                    <ModalHeader style={{
+                        fontWeight:'800',
+                    }}>OKUNOLA VILLA</ModalHeader>
+                    <ModalCloseButton />
+                    <ModalBody>
+                    <Box className='container zoom-anim-dialogue w-100'>
+                  <img className='w-100' src={image1} alt="" />
+                  <Stack spacing={4}>
+            
+            <Heading color={'gray.500'} mt='20'><span style={{
+              color:'pink',
+              fontWeight:'800'
+            }}>Triangle Concrete House</span> On Lake</Heading>
+            <Text color={'gray.500'} fontSize={'lg'}>
+                For each project, we establish relationships with partners who we know will  help us create added value for your project. 
+                As well as bringing together the public and private sectors, we make sector-overarching links to gather knowledge and to learn from each other.
+            </Text>
+            <Stack
+              spacing={4}
+              divider={
+                <StackDivider
+                  borderColor={useColorModeValue('gray.100', 'gray.700')}
+                />
+              }>
+              <ul class="project-detail-list text-dark">
+                        <li>
+                        <span class="left">Clients:</span>
+                        <span class="right">Ethan Hunt, John Doe</span>
+                        </li>
+                        <li>
+                        <span class="left">Completion:</span>
+                        <span class="right">February 5th, 2019</span>
+                        </li>
+                        <li>
+                        <span class="left">Project Type:</span>
+                        <span class="right">Villa, Residence</span>
+                        </li>
+                        <li>
+                        <span class="left">Architects:</span>
+                        <span class="right">Logan Cee, Paul</span>
+                        </li>
+                        <li>
+                        <span class="left">Budget:</span>
+                        <span class="right">$1 200 000</span>
+                        </li>
+                    </ul>
+            </Stack>
+          </Stack>
+                  </Box>
+                    </ModalBody>
+                    <ModalFooter>
+                        <marquee>Contemporary imaginations into <span style={{
+                                color:'pink',
+                                fontWeight:'800'
+                                }}>REALITY</span></marquee>
+                    </ModalFooter>
+                    </ModalContent>
+                </Modal>
+                </CardFooter>
+              </Card>
+                
+               </Box>
+            </Card>
+            <Card className='eachCard'>
+               <Box>
+               <Card maxW='sm'>
+                <CardBody>
+                  <Image
+                    src={image1}
+                    alt='Green double couch with wooden legs'
+                    borderRadius='lg'
+                  />
+                  <Stack mt='6' spacing='3'>
+                    <Heading size='md'>Living room Sofa</Heading>
+                    <Text>
+                      This sofa is perfect for modern tropical spaces.
+                    </Text>
+                    <Text color='blue.600' fontSize='2xl'>
+                      $450
+                    </Text>
+                  </Stack>
+                </CardBody>
+                <Divider />
+                <CardFooter>
+                {sizes.map((size) => (
+                <Button
+                    
+                    onClick={() => handleSizeClick(size)}
+                    key={size}
+                    m={4}
+                    color={'#fff'}
+                    bgColor={'blue.600'}
+                >{`See More Details`}</Button>
+                ))}
+                <Modal onClose={onClose} size={size} isOpen={isOpen}>
+                    <ModalOverlay />
+                    <ModalContent>
+                    <ModalHeader style={{
+                        fontWeight:'800',
+                    }}>OKUNOLA VILLA</ModalHeader>
+                    <ModalCloseButton />
+                    <ModalBody>
+                    <Box className='container zoom-anim-dialogue w-100'>
+                  <img className='w-100' src={image1} alt="" />
+                  <Stack spacing={4}>
+            
+            <Heading color={'gray.500'} mt='20'><span style={{
+              color:'pink',
+              fontWeight:'800'
+            }}>Triangle Concrete House</span> On Lake</Heading>
+            <Text color={'gray.500'} fontSize={'lg'}>
+                For each project, we establish relationships with partners who we know will  help us create added value for your project. 
+                As well as bringing together the public and private sectors, we make sector-overarching links to gather knowledge and to learn from each other.
+            </Text>
+            <Stack
+              spacing={4}
+              divider={
+                <StackDivider
+                  borderColor={useColorModeValue('gray.100', 'gray.700')}
+                />
+              }>
+              <ul class="project-detail-list text-dark">
+                        <li>
+                        <span class="left">Clients:</span>
+                        <span class="right">Ethan Hunt, John Doe</span>
+                        </li>
+                        <li>
+                        <span class="left">Completion:</span>
+                        <span class="right">February 5th, 2019</span>
+                        </li>
+                        <li>
+                        <span class="left">Project Type:</span>
+                        <span class="right">Villa, Residence</span>
+                        </li>
+                        <li>
+                        <span class="left">Architects:</span>
+                        <span class="right">Logan Cee, Paul</span>
+                        </li>
+                        <li>
+                        <span class="left">Budget:</span>
+                        <span class="right">$1 200 000</span>
+                        </li>
+                    </ul>
+            </Stack>
+          </Stack>
+                  </Box>
+                    </ModalBody>
+                    <ModalFooter>
+                        <marquee>Contemporary imaginations into <span style={{
+                                color:'pink',
+                                fontWeight:'800'
+                                }}>REALITY</span></marquee>
+                    </ModalFooter>
+                    </ModalContent>
+                </Modal>
+                </CardFooter>
+              </Card>
+                
+               </Box>
+            </Card>
+            <Card className='eachCard'>
+               <Box>
+               <Card maxW='sm'>
+                <CardBody>
+                  <Image
+                    src={image1}
+                    alt='Green double couch with wooden legs'
+                    borderRadius='lg'
+                  />
+                  <Stack mt='6' spacing='3'>
+                    <Heading size='md'>Living room Sofa</Heading>
+                    <Text>
+                      This sofa is perfect for modern tropical spaces.
+                    </Text>
+                    <Text color='blue.600' fontSize='2xl'>
+                      $450
+                    </Text>
+                  </Stack>
+                </CardBody>
+                <Divider />
+                <CardFooter>
+                {sizes.map((size) => (
+                <Button
+                    
+                    onClick={() => handleSizeClick(size)}
+                    key={size}
+                    m={4}
+                    color={'#fff'}
+                    bgColor={'blue.600'}
+                >{`See More Details`}</Button>
+                ))}
+                <Modal onClose={onClose} size={size} isOpen={isOpen}>
+                    <ModalOverlay />
+                    <ModalContent>
+                    <ModalHeader style={{
+                        fontWeight:'800',
+                    }}>OKUNOLA VILLA</ModalHeader>
+                    <ModalCloseButton />
+                    <ModalBody>
+                    <Box className='container zoom-anim-dialogue w-100'>
+                  <img className='w-100' src={image1} alt="" />
+                  <Stack spacing={4}>
+            
+            <Heading color={'gray.500'} mt='20'><span style={{
+              color:'pink',
+              fontWeight:'800'
+            }}>Triangle Concrete House</span> On Lake</Heading>
+            <Text color={'gray.500'} fontSize={'lg'}>
+                For each project, we establish relationships with partners who we know will  help us create added value for your project. 
+                As well as bringing together the public and private sectors, we make sector-overarching links to gather knowledge and to learn from each other.
+            </Text>
+            <Stack
+              spacing={4}
+              divider={
+                <StackDivider
+                  borderColor={useColorModeValue('gray.100', 'gray.700')}
+                />
+              }>
+              <ul class="project-detail-list text-dark">
+                        <li>
+                        <span class="left">Clients:</span>
+                        <span class="right">Ethan Hunt, John Doe</span>
+                        </li>
+                        <li>
+                        <span class="left">Completion:</span>
+                        <span class="right">February 5th, 2019</span>
+                        </li>
+                        <li>
+                        <span class="left">Project Type:</span>
+                        <span class="right">Villa, Residence</span>
+                        </li>
+                        <li>
+                        <span class="left">Architects:</span>
+                        <span class="right">Logan Cee, Paul</span>
+                        </li>
+                        <li>
+                        <span class="left">Budget:</span>
+                        <span class="right">$1 200 000</span>
+                        </li>
+                    </ul>
+            </Stack>
+          </Stack>
+                  </Box>
+                    </ModalBody>
+                    <ModalFooter>
+                        <marquee>Contemporary imaginations into <span style={{
+                                color:'pink',
+                                fontWeight:'800'
+                                }}>REALITY</span></marquee>
+                    </ModalFooter>
+                    </ModalContent>
+                </Modal>
+                </CardFooter>
+              </Card>
+                
+               </Box>
+            </Card>
+            <Card className='eachCard'>
+               <Box>
+               <Card maxW='sm'>
+                <CardBody>
+                  <Image
+                    src={image1}
+                    alt='Green double couch with wooden legs'
+                    borderRadius='lg'
+                  />
+                  <Stack mt='6' spacing='3'>
+                    <Heading size='md'>Living room Sofa</Heading>
+                    <Text>
+                      This sofa is perfect for modern tropical spaces.
+                    </Text>
+                    <Text color='blue.600' fontSize='2xl'>
+                      $450
+                    </Text>
+                  </Stack>
+                </CardBody>
+                <Divider />
+                <CardFooter>
+                {sizes.map((size) => (
+                <Button
+                    
+                    onClick={() => handleSizeClick(size)}
+                    key={size}
+                    m={4}
+                    color={'#fff'}
+                    bgColor={'blue.600'}
+                >{`See More Details`}</Button>
+                ))}
+                <Modal onClose={onClose} size={size} isOpen={isOpen}>
+                    <ModalOverlay />
+                    <ModalContent>
+                    <ModalHeader style={{
+                        fontWeight:'800',
+                    }}>OKUNOLA VILLA</ModalHeader>
+                    <ModalCloseButton />
+                    <ModalBody>
+                    <Box className='container zoom-anim-dialogue w-100'>
+                  <img className='w-100' src={image1} alt="" />
+                  <Stack spacing={4}>
+            
+            <Heading color={'gray.500'} mt='20'><span style={{
+              color:'pink',
+              fontWeight:'800'
+            }}>Triangle Concrete House</span> On Lake</Heading>
+            <Text color={'gray.500'} fontSize={'lg'}>
+                For each project, we establish relationships with partners who we know will  help us create added value for your project. 
+                As well as bringing together the public and private sectors, we make sector-overarching links to gather knowledge and to learn from each other.
+            </Text>
+            <Stack
+              spacing={4}
+              divider={
+                <StackDivider
+                  borderColor={useColorModeValue('gray.100', 'gray.700')}
+                />
+              }>
+              <ul class="project-detail-list text-dark">
+                        <li>
+                        <span class="left">Clients:</span>
+                        <span class="right">Ethan Hunt, John Doe</span>
+                        </li>
+                        <li>
+                        <span class="left">Completion:</span>
+                        <span class="right">February 5th, 2019</span>
+                        </li>
+                        <li>
+                        <span class="left">Project Type:</span>
+                        <span class="right">Villa, Residence</span>
+                        </li>
+                        <li>
+                        <span class="left">Architects:</span>
+                        <span class="right">Logan Cee, Paul</span>
+                        </li>
+                        <li>
+                        <span class="left">Budget:</span>
+                        <span class="right">$1 200 000</span>
+                        </li>
+                    </ul>
+            </Stack>
+          </Stack>
+                  </Box>
+                    </ModalBody>
+                    <ModalFooter>
+                        <marquee>Contemporary imaginations into <span style={{
+                                color:'pink',
+                                fontWeight:'800'
+                                }}>REALITY</span></marquee>
+                    </ModalFooter>
+                    </ModalContent>
+                </Modal>
+                </CardFooter>
+              </Card>
+                
+               </Box>
+            </Card>
+            {/* <Card className='eachCard'>
+               <Box>
+               <Card maxW='sm'>
+                <CardBody>
+                  <Image
+                    src={image1}
+                    alt='Green double couch with wooden legs'
+                    borderRadius='lg'
+                  />
+                  <Stack mt='6' spacing='3'>
+                    <Heading size='md'>Living room Sofa</Heading>
+                    <Text>
+                      This sofa is perfect for modern tropical spaces.
+                    </Text>
+                    <Text color='blue.600' fontSize='2xl'>
+                      $450
+                    </Text>
+                  </Stack>
+                </CardBody>
+                <Divider />
+                <CardFooter>
+                {sizes.map((size) => (
+                <Button
+                    variant='solid' colorScheme='blue'
                     onClick={() => handleSizeClick(size)}
                     key={size}
                     m={4}
@@ -168,9 +762,399 @@ const LatestProjects = () => {
                     </ModalContent>
                 </Modal>
                 </CardFooter>
+              </Card>
+                
                </Box>
             </Card>
             <Card className='eachCard'>
+               <Box>
+               <Card maxW='sm'>
+                <CardBody>
+                  <Image
+                    src={image1}
+                    alt='Green double couch with wooden legs'
+                    borderRadius='lg'
+                  />
+                  <Stack mt='6' spacing='3'>
+                    <Heading size='md'>Living room Sofa</Heading>
+                    <Text>
+                      This sofa is perfect for modern tropical spaces.
+                    </Text>
+                    <Text color='blue.600' fontSize='2xl'>
+                      $450
+                    </Text>
+                  </Stack>
+                </CardBody>
+                <Divider />
+                <CardFooter>
+                {sizes.map((size) => (
+                <Button
+                    variant='solid' colorScheme='blue'
+                    onClick={() => handleSizeClick(size)}
+                    key={size}
+                    m={4}
+                    color={'#c5a47e'}
+                    bgColor={'White'}
+                >{`See More Details`}</Button>
+                ))}
+                <Modal onClose={onClose} size={size} isOpen={isOpen}>
+                    <ModalOverlay />
+                    <ModalContent>
+                    <ModalHeader style={{
+                        fontWeight:'800',
+                    }}>OKUNOLA VILLA</ModalHeader>
+                    <ModalCloseButton />
+                    <ModalBody>
+                    <Box className='container zoom-anim-dialogue w-100'>
+                  <img className='w-100' src={image1} alt="" />
+                  <Stack spacing={4}>
+            
+            <Heading color={'gray.500'} mt='20'><span style={{
+              color:'pink',
+              fontWeight:'800'
+            }}>Triangle Concrete House</span> On Lake</Heading>
+            <Text color={'gray.500'} fontSize={'lg'}>
+                For each project, we establish relationships with partners who we know will  help us create added value for your project. 
+                As well as bringing together the public and private sectors, we make sector-overarching links to gather knowledge and to learn from each other.
+            </Text>
+            <Stack
+              spacing={4}
+              divider={
+                <StackDivider
+                  borderColor={useColorModeValue('gray.100', 'gray.700')}
+                />
+              }>
+              <ul class="project-detail-list text-dark">
+                        <li>
+                        <span class="left">Clients:</span>
+                        <span class="right">Ethan Hunt, John Doe</span>
+                        </li>
+                        <li>
+                        <span class="left">Completion:</span>
+                        <span class="right">February 5th, 2019</span>
+                        </li>
+                        <li>
+                        <span class="left">Project Type:</span>
+                        <span class="right">Villa, Residence</span>
+                        </li>
+                        <li>
+                        <span class="left">Architects:</span>
+                        <span class="right">Logan Cee, Paul</span>
+                        </li>
+                        <li>
+                        <span class="left">Budget:</span>
+                        <span class="right">$1 200 000</span>
+                        </li>
+                    </ul>
+            </Stack>
+          </Stack>
+                  </Box>
+                    </ModalBody>
+                    <ModalFooter>
+                        <marquee>Contemporary imaginations into <span style={{
+                                color:'pink',
+                                fontWeight:'800'
+                                }}>REALITY</span></marquee>
+                    </ModalFooter>
+                    </ModalContent>
+                </Modal>
+                </CardFooter>
+              </Card>
+                
+               </Box>
+            </Card>
+            <Card className='eachCard'>
+               <Box>
+               <Card maxW='sm'>
+                <CardBody>
+                  <Image
+                    src={image1}
+                    alt='Green double couch with wooden legs'
+                    borderRadius='lg'
+                  />
+                  <Stack mt='6' spacing='3'>
+                    <Heading size='md'>Living room Sofa</Heading>
+                    <Text>
+                      This sofa is perfect for modern tropical spaces.
+                    </Text>
+                    <Text color='blue.600' fontSize='2xl'>
+                      $450
+                    </Text>
+                  </Stack>
+                </CardBody>
+                <Divider />
+                <CardFooter>
+                {sizes.map((size) => (
+                <Button
+                    variant='solid' colorScheme='blue'
+                    onClick={() => handleSizeClick(size)}
+                    key={size}
+                    m={4}
+                    color={'#c5a47e'}
+                    bgColor={'White'}
+                >{`See More Details`}</Button>
+                ))}
+                <Modal onClose={onClose} size={size} isOpen={isOpen}>
+                    <ModalOverlay />
+                    <ModalContent>
+                    <ModalHeader style={{
+                        fontWeight:'800',
+                    }}>OKUNOLA VILLA</ModalHeader>
+                    <ModalCloseButton />
+                    <ModalBody>
+                    <Box className='container zoom-anim-dialogue w-100'>
+                  <img className='w-100' src={image1} alt="" />
+                  <Stack spacing={4}>
+            
+            <Heading color={'gray.500'} mt='20'><span style={{
+              color:'pink',
+              fontWeight:'800'
+            }}>Triangle Concrete House</span> On Lake</Heading>
+            <Text color={'gray.500'} fontSize={'lg'}>
+                For each project, we establish relationships with partners who we know will  help us create added value for your project. 
+                As well as bringing together the public and private sectors, we make sector-overarching links to gather knowledge and to learn from each other.
+            </Text>
+            <Stack
+              spacing={4}
+              divider={
+                <StackDivider
+                  borderColor={useColorModeValue('gray.100', 'gray.700')}
+                />
+              }>
+              <ul class="project-detail-list text-dark">
+                        <li>
+                        <span class="left">Clients:</span>
+                        <span class="right">Ethan Hunt, John Doe</span>
+                        </li>
+                        <li>
+                        <span class="left">Completion:</span>
+                        <span class="right">February 5th, 2019</span>
+                        </li>
+                        <li>
+                        <span class="left">Project Type:</span>
+                        <span class="right">Villa, Residence</span>
+                        </li>
+                        <li>
+                        <span class="left">Architects:</span>
+                        <span class="right">Logan Cee, Paul</span>
+                        </li>
+                        <li>
+                        <span class="left">Budget:</span>
+                        <span class="right">$1 200 000</span>
+                        </li>
+                    </ul>
+            </Stack>
+          </Stack>
+                  </Box>
+                    </ModalBody>
+                    <ModalFooter>
+                        <marquee>Contemporary imaginations into <span style={{
+                                color:'pink',
+                                fontWeight:'800'
+                                }}>REALITY</span></marquee>
+                    </ModalFooter>
+                    </ModalContent>
+                </Modal>
+                </CardFooter>
+              </Card>
+                
+               </Box>
+            </Card>
+            <Card className='eachCard'>
+               <Box>
+               <Card maxW='sm'>
+                <CardBody>
+                  <Image
+                    src={image1}
+                    alt='Green double couch with wooden legs'
+                    borderRadius='lg'
+                  />
+                  <Stack mt='6' spacing='3'>
+                    <Heading size='md'>Living room Sofa</Heading>
+                    <Text>
+                      This sofa is perfect for modern tropical spaces.
+                    </Text>
+                    <Text color='blue.600' fontSize='2xl'>
+                      $450
+                    </Text>
+                  </Stack>
+                </CardBody>
+                <Divider />
+                <CardFooter>
+                {sizes.map((size) => (
+                <Button
+                    variant='solid' colorScheme='blue'
+                    onClick={() => handleSizeClick(size)}
+                    key={size}
+                    m={4}
+                    color={'#c5a47e'}
+                    bgColor={'White'}
+                >{`See More Details`}</Button>
+                ))}
+                <Modal onClose={onClose} size={size} isOpen={isOpen}>
+                    <ModalOverlay />
+                    <ModalContent>
+                    <ModalHeader style={{
+                        fontWeight:'800',
+                    }}>OKUNOLA VILLA</ModalHeader>
+                    <ModalCloseButton />
+                    <ModalBody>
+                    <Box className='container zoom-anim-dialogue w-100'>
+                  <img className='w-100' src={image1} alt="" />
+                  <Stack spacing={4}>
+            
+            <Heading color={'gray.500'} mt='20'><span style={{
+              color:'pink',
+              fontWeight:'800'
+            }}>Triangle Concrete House</span> On Lake</Heading>
+            <Text color={'gray.500'} fontSize={'lg'}>
+                For each project, we establish relationships with partners who we know will  help us create added value for your project. 
+                As well as bringing together the public and private sectors, we make sector-overarching links to gather knowledge and to learn from each other.
+            </Text>
+            <Stack
+              spacing={4}
+              divider={
+                <StackDivider
+                  borderColor={useColorModeValue('gray.100', 'gray.700')}
+                />
+              }>
+              <ul class="project-detail-list text-dark">
+                        <li>
+                        <span class="left">Clients:</span>
+                        <span class="right">Ethan Hunt, John Doe</span>
+                        </li>
+                        <li>
+                        <span class="left">Completion:</span>
+                        <span class="right">February 5th, 2019</span>
+                        </li>
+                        <li>
+                        <span class="left">Project Type:</span>
+                        <span class="right">Villa, Residence</span>
+                        </li>
+                        <li>
+                        <span class="left">Architects:</span>
+                        <span class="right">Logan Cee, Paul</span>
+                        </li>
+                        <li>
+                        <span class="left">Budget:</span>
+                        <span class="right">$1 200 000</span>
+                        </li>
+                    </ul>
+            </Stack>
+          </Stack>
+                  </Box>
+                    </ModalBody>
+                    <ModalFooter>
+                        <marquee>Contemporary imaginations into <span style={{
+                                color:'pink',
+                                fontWeight:'800'
+                                }}>REALITY</span></marquee>
+                    </ModalFooter>
+                    </ModalContent>
+                </Modal>
+                </CardFooter>
+              </Card>
+                
+               </Box>
+            </Card>
+            <Card className='eachCard'>
+               <Box>
+               <Card maxW='sm'>
+                <CardBody>
+                  <Image
+                    src={image1}
+                    alt='Green double couch with wooden legs'
+                    borderRadius='lg'
+                  />
+                  <Stack mt='6' spacing='3'>
+                    <Heading size='md'>Living room Sofa</Heading>
+                    <Text>
+                      This sofa is perfect for modern tropical spaces.
+                    </Text>
+                    <Text color='blue.600' fontSize='2xl'>
+                      $450
+                    </Text>
+                  </Stack>
+                </CardBody>
+                <Divider />
+                <CardFooter>
+                {sizes.map((size) => (
+                <Button
+                    variant='solid' colorScheme='blue'
+                    onClick={() => handleSizeClick(size)}
+                    key={size}
+                    m={4}
+                    color={'#c5a47e'}
+                    bgColor={'White'}
+                >{`See More Details`}</Button>
+                ))}
+                <Modal onClose={onClose} size={size} isOpen={isOpen}>
+                    <ModalOverlay />
+                    <ModalContent>
+                    <ModalHeader style={{
+                        fontWeight:'800',
+                    }}>OKUNOLA VILLA</ModalHeader>
+                    <ModalCloseButton />
+                    <ModalBody>
+                    <Box className='container zoom-anim-dialogue w-100'>
+                  <img className='w-100' src={image1} alt="" />
+                  <Stack spacing={4}>
+            
+            <Heading color={'gray.500'} mt='20'><span style={{
+              color:'pink',
+              fontWeight:'800'
+            }}>Triangle Concrete House</span> On Lake</Heading>
+            <Text color={'gray.500'} fontSize={'lg'}>
+                For each project, we establish relationships with partners who we know will  help us create added value for your project. 
+                As well as bringing together the public and private sectors, we make sector-overarching links to gather knowledge and to learn from each other.
+            </Text>
+            <Stack
+              spacing={4}
+              divider={
+                <StackDivider
+                  borderColor={useColorModeValue('gray.100', 'gray.700')}
+                />
+              }>
+              <ul class="project-detail-list text-dark">
+                        <li>
+                        <span class="left">Clients:</span>
+                        <span class="right">Ethan Hunt, John Doe</span>
+                        </li>
+                        <li>
+                        <span class="left">Completion:</span>
+                        <span class="right">February 5th, 2019</span>
+                        </li>
+                        <li>
+                        <span class="left">Project Type:</span>
+                        <span class="right">Villa, Residence</span>
+                        </li>
+                        <li>
+                        <span class="left">Architects:</span>
+                        <span class="right">Logan Cee, Paul</span>
+                        </li>
+                        <li>
+                        <span class="left">Budget:</span>
+                        <span class="right">$1 200 000</span>
+                        </li>
+                    </ul>
+            </Stack>
+          </Stack>
+                  </Box>
+                    </ModalBody>
+                    <ModalFooter>
+                        <marquee>Contemporary imaginations into <span style={{
+                                color:'pink',
+                                fontWeight:'800'
+                                }}>REALITY</span></marquee>
+                    </ModalFooter>
+                    </ModalContent>
+                </Modal>
+                </CardFooter>
+              </Card>
+                
+               </Box>
+            </Card> */}
+            {/* <Card className='eachCard'>
                <Box>
                <CardHeader>
                 <Heading size='md'> Triangle Concrete House On Lake</Heading>
@@ -579,7 +1563,7 @@ const LatestProjects = () => {
                 </Modal>
                 </CardFooter>
                </Box>
-            </Card>
+            </Card> */}
          
             
             
