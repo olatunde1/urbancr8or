@@ -15,6 +15,7 @@ import {
 
 import { useDisclosure } from '@chakra-ui/react';
 import image1 from './images/new.jpg'
+import image2 from './images/4.jpg'
 
 
 
@@ -189,7 +190,7 @@ const LatestProjects = () => {
                <Card maxW='sm'>
                 <CardBody>
                   <Image
-                    src={image1}
+                    src={image2}
                     alt='Green double couch with wooden legs'
                     borderRadius='lg'
                   />
@@ -224,13 +225,13 @@ const LatestProjects = () => {
                     <ModalCloseButton />
                     <ModalBody>
                     <Box className='container zoom-anim-dialogue w-100'>
-                  <img className='w-100' src={image1} alt="" />
+                  <img className='w-100' src={image2} alt="" />
                   <Stack spacing={4}>
             
             <Heading color={'gray.500'} mt='20'><span style={{
               color:'pink',
               fontWeight:'800'
-            }}>Triangle Concrete House</span> On Lake</Heading>
+            }}>Rectangle Concrete House</span> On Lake</Heading>
             <Text color={'gray.500'} fontSize={'lg'}>
                 For each project, we establish relationships with partners who we know will  help us create added value for your project. 
                 As well as bringing together the public and private sectors, we make sector-overarching links to gather knowledge and to learn from each other.
