@@ -2,7 +2,6 @@ import {
   Avatar,
   Box,
   chakra,
-  Container,
   Flex,
   Icon,
   SimpleGrid,
@@ -133,6 +132,7 @@ function TestimonialCard(props: TestimonialCardProps) {
 export default function GridBlurredBackdrop() {
   return (
     <Flex
+      id='testimony'
       textAlign={'center'}
       pt={10}
       justifyContent={'center'}

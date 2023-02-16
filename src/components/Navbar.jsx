@@ -241,19 +241,13 @@ const MobileNavItem = ({ label, children, href }) => {
   );
 };
 
-// interface NavItem {
-//   label: string;
-//   subLabel?: string;
-//   children?: Array<NavItem>;
-//   href?: string;
-// }
 
 const NAV_ITEMS = [
   {
-    label: 'Inspiration',
+    label: 'About us',
     children: [
       {
-        label: 'Explore Design Work',
+        label: 'Our Best Clients',
         subLabel: 'Trending Design to inspire you',
         href: '#',
       },
@@ -265,7 +259,7 @@ const NAV_ITEMS = [
     ],
   },
   {
-    label: 'Find Work',
+    label: 'Our Services',
     children: [
       {
         label: 'Job Board',
@@ -280,11 +274,15 @@ const NAV_ITEMS = [
     ],
   },
   {
-    label: 'Learn Design',
+    label: 'Project highlights',
     href: '#',
   },
   {
-    label: 'Hire Designers',
-    href: '#LatestProject',
+    label: 'Contact us',
+    href: '#contact',
+  },
+  {
+    label: 'Testimonies',
+    href: '#testimony',
   },
 ];

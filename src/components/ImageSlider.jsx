@@ -10,7 +10,7 @@ const ImageSlider = () => {
 >
   <Image
     objectFit='cover'
-    maxW={{ base: '100%', sm: '1034px' }}
+    maxW={{ base: 'block', sm: '1034px' }}
     src={banner}
     alt='Caffe Latte'
   />
@@ -19,12 +19,10 @@ const ImageSlider = () => {
     <CardBody className='interior' alignContent={'center'}>
       <Heading
       fontSize={'32px'}
-      // paddingLeft={16}
       paddingBottom={8}
       size='md'>Interior Design</Heading>
       <Text
-      // paddingLeft={16}
-      // paddingTop={6}
+      
       >
         Complexity represents intricacy of framework, stored information on how the system really works as well its very own make-up.
       </Text>

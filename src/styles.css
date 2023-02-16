@@ -13,23 +13,47 @@ html{
 }
 
 .moveWrap{
-    overflow: hidden;
-    margin-top: 20px;
-    border: 1px solid #f2f2f2;
-}
-.move{
+    /* background-color: #353535; */
+    /* color: #fff; */
+    padding: 2px 0;
     display: flex;
-    flex-direction: row;
+    align-items: center;
+    border: none;
+
+}
+.ourBestClient{
+    margin: 0 80px;
+    white-space: nowrap;
+    padding-right: 6rem;
+    padding-left: 6rem;
+
+}
+.ourBestClient h1{
+    font-size: 24px;
+    font-family: 'Reem Kufi',sans-serif;;
+}
+
+
+
+
+.move{
+    display: inline-flex;
+    animation: marquee-to-left 80s linear infinite;
+    align-items: center;
 }
 
 .move img{
     height: 6rem;
-    width: 6rem;
-    border-radius: 50%;
+    border-radius: 10%;
     margin: 20px;
     margin-top: 40px;
     margin-bottom: 20px;
-   
+    filter: drop-shadow(10px 10px 5px #ccc);
+    /* box-shadow: 6px 6px 5px #ccc; */
+    /* -moz-box-shadow: 10px 10px 5px #ccc;
+    -webkit-box-shadow: 10px 10px 5px #ccc;
+    -khtml-box-shadow: 10px 10px 5px #ccc;
+    */
 }
 .card1:hover{
     background-color: #f2f2f2;
@@ -109,7 +133,7 @@ html{
     transition: all .5s;
   }
   
-  .eachCard :hover{
+.eachCard :hover{
     background-color: #f2f2f2;
     color: #000;
     cursor: pointer;
@@ -170,4 +194,8 @@ html{
     background-color: green;
     color: #fff;
 }
-  
+@media (max-width: 400px) {
+    .moveWrap{
+        display: none;
+    }
+}
