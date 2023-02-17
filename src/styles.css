@@ -42,7 +42,9 @@ html{
 }
 .ourBestClient h1{
     font-size: 24px;
-    font-family: 'Reem Kufi',sans-serif;;
+    font-family: 'Reem Kufi',sans-serif;
+    border-bottom: 2px solid white;
+    
 }
 
 
