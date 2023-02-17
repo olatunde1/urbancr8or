@@ -1,18 +1,23 @@
 import React from 'react'
-import {Image, Stack,Heading,Text,Button, Card, CardHeader, CardBody, CardFooter } from '@chakra-ui/react'
+import {Image, Stack,Heading,Text, Card, CardBody, Show,Hide} from '@chakra-ui/react'
 import banner from './images/interior.jpg'
 const ImageSlider = () => {
   return (
-    <Card
-  direction={{ base: 'column', sm: 'row' }}
-  overflow='hidden'
-  variant='outline'
->
+    <div  className='int'>
+      <Card
+      direction={{ base: 'column', sm: 'row' }}
+      overflow='hidden'
+      variant='outline'
+      border={'none'}
+      borderRadius='none'
+    >
   <Image
+  
     objectFit='cover'
     maxW={{ base: 'block', sm: '1034px' }}
     src={banner}
     alt='Caffe Latte'
+    maxWidth={'100%'}
   />
 
   <Stack>
@@ -28,8 +33,9 @@ const ImageSlider = () => {
       </Text>
     </CardBody>
   </Stack>
-</Card>
-
+    </Card> 
+    </div>
+    
   )
 }
 

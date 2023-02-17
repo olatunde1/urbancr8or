@@ -189,7 +189,7 @@ const LatestProjects = () => {
                <Card maxW='sm'>
                 <CardBody>
                   <Image
-                    src={image2}
+                    src={image1}
                     alt='Green double couch with wooden legs'
                     borderRadius='lg'
                   />

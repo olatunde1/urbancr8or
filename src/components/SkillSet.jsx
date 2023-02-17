@@ -6,12 +6,13 @@ const SkillSet = () => {
   return (
    <Center>
          <Card
-            className='CardSkillSet'
+            className='cardSkillSet'
             direction={{ base: 'column', sm: 'row' }}
             overflow='hidden'
-            variant='outline'
-            marginTop={'90px'}
-            marginBottom={'90px'}
+            
+            variant="unstyled"
+            // marginTop={'90px'}
+            // marginBottom={'90px'}
             >
 
             <Card 
