@@ -7,6 +7,7 @@ import {
   SimpleGrid,
   useColorModeValue,
 } from '@chakra-ui/react';
+import Gallery from './Gallery';
 
 const testimonials = [
   {

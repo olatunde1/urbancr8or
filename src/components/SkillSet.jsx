@@ -10,10 +10,7 @@ const SkillSet = () => {
             direction={{ base: 'column', sm: 'row' }}
             overflow='hidden'
             
-            variant="unstyled"
-            // marginTop={'90px'}
-            // marginBottom={'90px'}
-            >
+            variant="unstyled">
 
             <Card 
             className='card1'
@@ -54,27 +51,6 @@ const SkillSet = () => {
         
         </Card>
    </Center>
-    
-    // <container className='skill'>
-    //     <div>
-    //         <p>1</p>
-    //         <h1>Architecture</h1>
-    //         <p>We address requirements and constraints with the right mix of analytical thinking, creativity and artistry — designing buildings that make a statement, conserve natural resources and enrich our experience.</p>
-
-    //     </div>
-    //     <div>
-    //         <p>1</p>
-    //         <h1>Architecture</h1>
-    //         <p>We address requirements and constraints with the right mix of analytical thinking, creativity and artistry — designing buildings that make a statement, conserve natural resources and enrich our experience.</p>
-
-    //     </div>
-    //     <div>
-    //         <p>1</p>
-    //         <h1>Architecture</h1>
-    //         <p>We address requirements and constraints with the right mix of analytical thinking, creativity and artistry — designing buildings that make a statement, conserve natural resources and enrich our experience.</p>
-
-    //     </div>
-    // </container>
   )
 }
 

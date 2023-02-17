@@ -22,7 +22,6 @@ const client = () => {
               <img src={Ace} alt="" srcset="" />
             </div>   
         </marquee>  
-   
 
     </div>
   )

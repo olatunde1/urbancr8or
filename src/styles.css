@@ -16,10 +16,6 @@ html{
     margin-top: 90px;
     margin-bottom: 90px;
     border-radius: 12px;
-    /* padding: 16px; */
-    /* display: flex; */
-    /* grid-template-columns: 1fr 1fr; */
-    /* grid-gap: 24px; */
     gap: 24px;
     height: 100%;
     width: 1200px;
@@ -29,11 +25,12 @@ html{
 .moveWrap{
     background-color: #353535;
     color: #fff;
-    padding: 2px 0;
+    padding: 1px 0;
     display: flex;
     align-items: center;
     border: none;
-    /* margin-top: 20px; */
+    margin-top: 128px;
+
 
 }
 .ourBestClient{
@@ -64,12 +61,8 @@ html{
     margin-top: 20px;
     margin-bottom: 20px;
     filter: grayscale(100%) !important;
-    /* filter: drop-shadow(10px 10px 5px #ccc); */
     box-shadow: 6px 6px 5px #ccc;
-    /* -moz-box-shadow: 10px 10px 5px #ccc;
-    -webkit-box-shadow: 10px 10px 5px #ccc;
-    -khtml-box-shadow: 10px 10px 5px #ccc;
-    */
+   
 }
 .card1{
     align-items: center;
@@ -87,7 +80,6 @@ html{
         background-image: linear-gradient(0deg, rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(./components/images/bkkk.jpg);
         background-position: 50% 50%;
         background-attachment: fixed;
-    /* background-image: url(./components/images/backg.jpeg); */
         background-size: cover;
         background-repeat: no-repeat;
         display: block;
@@ -98,7 +90,6 @@ html{
     word-break: break-word;
     font-family: 'Reem Kufi',sans-serif;
     background-color: #353535;
-    /* background-color: #252424; */
     color: #fff;
     display: grid;
     text-align: center;
@@ -135,7 +126,6 @@ html{
 }
 
 .latest{
-    /* background-image: url(./components/images/new7.jpg); */
     background-repeat:no-repeat;
     background-size: cover;
     object-fit: contain;
@@ -152,7 +142,6 @@ html{
 
 .eachCard {
     background-color: white;
-    /* border: 2px solid #c5a47e ; */
     color: #000000 !important;
     transition: all .5s;
   }
@@ -219,6 +208,40 @@ html{
     color: #fff;
 }
 
+element.style {
+    width: 100%;
+}
+
+.galleryMain img {
+    height: auto;
+    width: 100%;
+}
+.galleryMain{
+    margin-top: 128px;
+    margin-bottom: 4rem;
+    -webkit-column-count: 3;
+    -webkit-column-width: 25%;
+    columns: 25% 3;
+    padding: 0;
+}
+.galleryMain .pics {
+    cursor: pointer;
+    margin-bottom: 12px;
+    padding-top: 10px;
+    transition: all .35s ease;
+}
+
+
+.css-1gzxeik {
+    animation-duration: 1000ms;
+    animation-timing-function: ease;
+    animation-delay: 0ms;
+    animation-name: animation-os2n7p;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+}
+
 @media (max-width: 500px) {
     .moveWrap{
         display: none;
@@ -230,3 +253,21 @@ html{
         display: none;
     }
 }
+
+@media only screen and (min-width: 100px) and (max-width: 425px){
+    .galleryMain {
+        -webkit-column-count: 2;
+        column-count: 2;
+        padding: 0;
+    }
+}
+
+
+@media only screen and (min-width: 100px) and (max-width: 425px){
+    .galleryMain img {
+        height: auto;
+        width: 100%;
+        display:grid;
+    }
+}
+

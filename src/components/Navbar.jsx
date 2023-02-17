@@ -260,25 +260,27 @@ const NAV_ITEMS = [
   },
   {
     label: 'Our Services',
+    href: '#',
+  },
+  {
+    label: 'Project highlights',
     children: [
       {
-        label: 'Job Board',
-        subLabel: 'Find your dream design job',
-        href: '#contact',
+        label: 'Gallery',
+        subLabel: 'Check our gallery for our favorite completed projects',
+        href: '#gallery',
       },
       {
-        label: 'Freelance Projects',
+        label: 'Our Latest Project',
         subLabel: 'An exclusive list for contract work',
         href: '#',
       },
     ],
   },
-  {
-    label: 'Project highlights',
-    href: '#',
-  },
+ 
   {
     label: 'Contact us',
+    subLabel: 'Check our gallery for our favorite completed projects',
     href: '#contact',
   },
   {

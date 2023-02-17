@@ -10,6 +10,7 @@ import Testimony from './Testimony'
 import ImageSlider from './ImageSlider'
 import SkillSet from './SkillSet'
 import Client from './Client'
+import Gallery from './Gallery'
 import '../../src/styles.css';
 
 
@@ -22,7 +23,8 @@ const Landing = () => {
           <SkillSet />
           <ImageSlider />
           <Client />
-          <LatestProjects />
+          <Gallery />
+          {/* <LatestProjects /> */}
           <Testimony />
           <Contact />
           <Footer />
