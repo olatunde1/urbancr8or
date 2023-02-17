@@ -21,8 +21,8 @@ const Landing = () => {
         <Container pt={100} as="main" maxW='container.full' >
           <About />
           <SkillSet />
-          <ImageSlider />
           <Client />
+          <ImageSlider />
           <Gallery />
           {/* <LatestProjects /> */}
           <Testimony />

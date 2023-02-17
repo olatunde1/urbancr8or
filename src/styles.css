@@ -1,6 +1,20 @@
 *{
     font-family: 'Roboto Slab',serif
 }
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+*, *:before, *:after{
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing:border-box;
+  box-sizing: border-box;
+}
+
+body{
+  background: #f9f9f9;
+  font-size: 16px;
+}
 html{
     scroll-behavior: smooth;
 }
@@ -8,9 +22,13 @@ html{
     height: 50px;
     width: 50px;
 }
-.Container{
-    width: 100%;
-}
+
+.container{
+    padding: 1em 0;
+    float: left;
+    max-width: 100%;
+    overflow: hidden;
+  }
 
 .cardSkillSet{
     margin-top: 90px;
@@ -29,10 +47,10 @@ html{
     display: flex;
     align-items: center;
     border: none;
-    margin-top: 128px;
-
+    padding-bottom: 3rem;
 
 }
+
 .ourBestClient{
     margin: 0 80px;
     white-space: nowrap;
@@ -57,11 +75,12 @@ html{
 }
 
 .move img{
-    height: 6rem;
+    height: 3rem;
+    width: 3rem;
     border-radius: 10%;
     margin: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     filter: grayscale(100%) !important;
     box-shadow: 6px 6px 5px #ccc;
    
@@ -235,6 +254,7 @@ element.style {
 
 
 .css-1gzxeik {
+    width: 100%;
     animation-duration: 1000ms;
     animation-timing-function: ease;
     animation-delay: 0ms;
@@ -243,6 +263,93 @@ element.style {
     animation-fill-mode: both;
     animation-iteration-count: 1;
 }
+
+.pics{
+    position: relative;
+}
+.overlayText{
+    background: rgba(0,0,0,0.7);
+    position: absolute;
+    height: 99%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+.pics:hover .overlayText{
+    opacity: 1;
+}
+
+.text-details{
+    position: absolute;
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.pics:hover .text-details{
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+}
+
+.text-details h1{
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.5em;
+    text-transform: uppercase;
+}
+
+.text-details p{
+    color: #fff;
+    font-size: 0.8em;
+}
+
+.text-details button{
+    color: #fff;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: #c5a47e;
+    margin-top: 2rem;
+    border-radius: 1rem;
+    /* font-size: 0.8em; */
+}
+
+.fadeIn-bottom{
+    top: 80%;
+}
+
+.fadeIn-top{
+    top: 20%;
+  }
+  
+  .fadeIn-left{
+    left: 20%;
+  }
+  
+  .fadeIn-right{
+    left: 80%;
+  }
+
 
 @media (max-width: 500px) {
     .moveWrap{
