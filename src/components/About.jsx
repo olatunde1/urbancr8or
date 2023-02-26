@@ -1,15 +1,12 @@
 import {
     Container,
     SimpleGrid,
-    Image,
     Flex,
     Box,
-    Heading,
     Text,
     Stack,
     StackDivider,
     useColorModeValue,
-    Center,
   } from '@chakra-ui/react';
   
   const Feature = ({ text, icon, iconBg }) => {
