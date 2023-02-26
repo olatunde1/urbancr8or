@@ -18,9 +18,7 @@ import {
 
   } from '@chakra-ui/react'
  
-   const wrap = () => {
-
-   }
+  
     const CustomModal = ({ showModalButtonText, modalHeader, modalBody }) => {
     const { isOpen, onOpen, onClose } = useDisclosure();
     return (
