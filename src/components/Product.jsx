@@ -26,7 +26,7 @@ const ReadMore = ({ children }) => {
   };
   return (
     <p className="text">
-      {isReadMore ? text.slice(0, 399) : text}
+      {isReadMore ? text.slice(0, 220) : text}
       <span onClick={toggleReadMore} className="read-or-hide">
         {isReadMore ? "...read more" : " show less"}
       </span>
@@ -43,7 +43,7 @@ const ReadMore2 = ({ children }) => {
   };
   return (
     <p className="text">
-      {isReadMore ? text.slice(0, 399) : text}
+      {isReadMore ? text.slice(0, 264) : text}
       <span onClick={toggleReadMore} className="read-or-hide">
         {isReadMore ? "...read more" : " show less"}
       </span>
@@ -52,6 +52,22 @@ const ReadMore2 = ({ children }) => {
   );
 };
 
+const ReadMore3 = ({ children }) => {
+  const text = children;
+  const [isReadMore, setIsReadMore] = useState(true);
+  const toggleReadMore = () => {
+    setIsReadMore(!isReadMore);
+  };
+  return (
+    <p className="text">
+      {isReadMore ? text.slice(0, 264) : text}
+      <span onClick={toggleReadMore} className="read-or-hide">
+        {isReadMore ? "...read more" : " show less"}
+      </span>
+    </p>
+    
+  );
+};
 
 export default function CallToActionWithVideo() {
   return (
@@ -279,8 +295,8 @@ export default function CallToActionWithVideo() {
           <Text color={'gray.500'} textAlign={'justify'} lineHeight={'8'}>
             <ReadMore2>
             Abayomi is a dedicated, resourceful and proactive AEC (Architecture, Engineering, construction) professional with years of experience from various projects. Interested in using architecture to solve social needs and create sustainable space, functional and unique.
-          He holds both Bachelor of Technology and Masters of Technology in Architecture from Federal University of Technology, Akure.
-          He has appreciable knowledge and experience of Architectural project designs, including conceptual and  schematic design, skilled in visualization and design development.
+            He holds both Bachelor of Technology and Masters of Technology in Architecture from Federal University of Technology, Akure.
+            He has appreciable knowledge and experience of Architectural project designs, including conceptual and  schematic design, skilled in visualization and design development.
             </ReadMore2>
          
           </Text>
@@ -387,8 +403,10 @@ export default function CallToActionWithVideo() {
         
           </Heading>
           <Text color={'gray.500'} textAlign={'justify'} lineHeight={'8'}>
+          <ReadMore3>
           Ismail is a hardworking, friendly, respectful, motivated Architect filled with enthusiasm and passion in the world of Architecture, having clarity of vision to take Architecture to the future through matchless and unique sustainable designs with 21st century creativities.
           Since graduating from Federal University of Technology Akure, Ondo State Nigeria with a Master of Technology Degree in Architecture, He have worked on projects such as Design and Construction of Buildings, Urban Designs, Landscaping and Beautification which made him discreet in disposition. Ismail is furthering his knowledge in Construction Waste Minimization Research as an aspect of ensuring Architecture solves the problem of sustainability in Construction Industry.
+          </ReadMore3>
           </Text>
           <Stack
             spacing={{ base: 4, sm: 6 }}
