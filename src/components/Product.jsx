@@ -1,3 +1,4 @@
+import React, {useState} from 'react';
 import {
   Container,
   Stack,
@@ -15,6 +16,42 @@ import {
 
 import team from './images/abayomi-removebg-preview.png'
 import team3 from './images/ismael-removebg-preview.png'
+
+
+const ReadMore = ({ children }) => {
+  const text = children;
+  const [isReadMore, setIsReadMore] = useState(true);
+  const toggleReadMore = () => {
+    setIsReadMore(!isReadMore);
+  };
+  return (
+    <p className="text">
+      {isReadMore ? text.slice(0, 399) : text}
+      <span onClick={toggleReadMore} className="read-or-hide">
+        {isReadMore ? "...read more" : " show less"}
+      </span>
+    </p>
+    
+  );
+};
+
+const ReadMore2 = ({ children }) => {
+  const text = children;
+  const [isReadMore, setIsReadMore] = useState(true);
+  const toggleReadMore = () => {
+    setIsReadMore(!isReadMore);
+  };
+  return (
+    <p className="text">
+      {isReadMore ? text.slice(0, 399) : text}
+      <span onClick={toggleReadMore} className="read-or-hide">
+        {isReadMore ? "...read more" : " show less"}
+      </span>
+    </p>
+    
+  );
+};
+
 
 export default function CallToActionWithVideo() {
   return (
@@ -122,9 +159,19 @@ export default function CallToActionWithVideo() {
         
           </Heading>
           <Text color={'gray.500'} textAlign={'justify'} lineHeight={'8'}>
-          Abayomi is a dedicated, resourceful and proactive AEC (Architecture, Engineering, construction) professional with years of experience from various projects. Interested in using architecture to solve social needs and create sustainable space, functional and unique.
-          He holds both Bachelor of Technology and Masters of Technology in Architecture from Federal University of Technology, Akure.
-          He has appreciable knowledge and experience of Architectural project designs, including conceptual and  schematic design, skilled in visualization and design development.
+            <ReadMore>Arc Obafemi A. Ibitoye (F4689) is a registered Architect with Architect Registration Council of Nigeria (ARCON). 
+          He is a Proactive professional with 12years of experience in Academics and the built environment industry. 
+          He holds Bachelor of Technology and Masters of Environmental Design in Architecture from Ladoke Akintola 
+          University of  Technology, Ogbomoso and University of Lagos respectively. Ibitoye worked with PRODECO International; 
+          a subsidiary of Intel's Oil and gas where he coordinated housing and hospitality projects development in Portharcourt 
+          and Lagos State Nigeria. At PRODECO he contributed in the Auditing of the Concept design for Eko Energy Estate, 
+          Eko Atlantic City. He teaches Architectural Conceptualization, Architectural Design and Building Construction 
+          Methodology at both B.Sc and M.Sc Levels in Caleb University, Lagos. He was formerly Ag. head, department of 
+          Architecture, Redeemers College of Technology (RECTEM). Ibitoye is a PhD Candidate at Caleb University who is
+          interested in using architecture to solve social needs and create sustainable functional shelter with the 
+          integration of locally induced building materials. He is a Co founder of Urbancr8ors; a property development 
+          Company based in Lagos and Ogun state Nigeria.</ReadMore>
+          
           </Text>
           <Stack
             spacing={{ base: 4, sm: 6 }}
@@ -230,9 +277,12 @@ export default function CallToActionWithVideo() {
         
           </Heading>
           <Text color={'gray.500'} textAlign={'justify'} lineHeight={'8'}>
-          Abayomi is a dedicated, resourceful and proactive AEC (Architecture, Engineering, construction) professional with years of experience from various projects. Interested in using architecture to solve social needs and create sustainable space, functional and unique.
+            <ReadMore2>
+            Abayomi is a dedicated, resourceful and proactive AEC (Architecture, Engineering, construction) professional with years of experience from various projects. Interested in using architecture to solve social needs and create sustainable space, functional and unique.
           He holds both Bachelor of Technology and Masters of Technology in Architecture from Federal University of Technology, Akure.
           He has appreciable knowledge and experience of Architectural project designs, including conceptual and  schematic design, skilled in visualization and design development.
+            </ReadMore2>
+         
           </Text>
           <Stack
             spacing={{ base: 4, sm: 6 }}
