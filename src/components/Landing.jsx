@@ -18,18 +18,19 @@ const Landing = () => {
   return ( 
     <>
         {/* <NavBar position="fixed" minW='100%'/> */}
-        <Container pt={100} as="main" maxW='container.full' >
+        
           <About />
           <SkillSet />
           {/* <Client /> */}
           {/* <ImageSlider /> */}
           {/* <Data /> */}
-          <Product />
           <Gallery />
+          <Product />
           <Testimony />
           <Contact />
+         
           <Footer />
-        </Container>
+       
     </>
   )
 }
