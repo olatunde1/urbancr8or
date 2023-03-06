@@ -26,7 +26,6 @@ import {
     <div className='container'>
         <h1 className='project-highlights'>Projects Highlights</h1>
         <div id='gallery' class="galleryMain">
-            {/* <div class="pics"><img src={pic1} alt="galleryImages" /></div> */}
             <div class="pics">
                 <div className="overlayText">
                 </div>
@@ -122,7 +121,7 @@ import {
                 </Modal>
 
                 </div>
-            </div>   
+            </div>
             <div class="pics">
                 <div className="overlayText">
                 </div>
@@ -219,7 +218,6 @@ import {
 
                 </div>
             </div>   
-          
             <div class="pics">
                 <div className="overlayText">
                 </div>
@@ -251,15 +249,12 @@ import {
                 </Modal>
 
                 </div>
-            </div>                
+            </div>
+                          
         </div>
     </div>
   )
 }
-
-
-
-
 
     
 export default function Gallery() {

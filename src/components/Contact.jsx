@@ -61,7 +61,7 @@ import {
             <VStack spacing={{ base: 4, md: 8, lg: 20 }}>
               <Heading
                 fontSize={{
-                  base: '4xl',
+                  base: '2xl',
                   md: '5xl',
                 }}>
                 Get in Touch with us
@@ -95,7 +95,7 @@ import {
   
                   <Link href="https://www.facebook.com/horlertundey">
                     <IconButton
-                      aria-label="github"
+                      aria-label="facebook"
                       variant="ghost"
                       size="lg"
                       fontSize="3xl"
@@ -143,13 +143,14 @@ import {
                   p={8}
                   color={useColorModeValue('gray.700', 'whiteAlpha.900')}
                   shadow="base">
-                  <VStack spacing={5}>
+                  <VStack >\
+                    <form action="https://formsubmit.co/idowuolatunde32@gmail.com" method="POST">
                     <FormControl isRequired>
                       <FormLabel>Name</FormLabel>
   
                       <InputGroup>
                         <InputLeftElement children={< MdPerson />} />
-                        <Input type="text" name="name" placeholder="Your Name" />
+                        <Input type="text" name="name" placeholder="Your Name"  />
                       </InputGroup>
                     </FormControl>
   
@@ -173,11 +174,14 @@ import {
                         name="message"
                         placeholder="Your Message"
                         rows={6}
-                        resize="none"
+                        resize="none" 
                       />
                     </FormControl>
-  
                     <Button
+                    marginTop={'24px'}
+                    type='submit'
+                    paddingLeft={'84px'}
+                    paddingRight={'84px'}
                       colorScheme="blue"
                       bg="blue.400"
                       color="white"
@@ -187,6 +191,10 @@ import {
                       isFullWidth>
                       Send Message
                     </Button>
+                    </form>
+                    
+  
+                    
                   </VStack>
                 </Box>
               </Stack>
