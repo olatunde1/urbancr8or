@@ -2,8 +2,6 @@ import {
   Avatar,
   Box,
   chakra,
-  Container,
-  Flex,
   Icon,
   SimpleGrid,
   useColorModeValue,
