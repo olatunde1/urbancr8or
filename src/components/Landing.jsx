@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container } from '@chakra-ui/react'
+// import { Container } from '@chakra-ui/react'
 // import NavBar from './NavBar'
 import Footer from './Footer'
 import About from './About'
@@ -18,7 +18,7 @@ const Landing = () => {
         
           <About />
           <SkillSet />
-          <Gallery />
+          {/* <Gallery /> */}
           <Product />
           <Testimony />
           <Contact />

@@ -30,7 +30,7 @@ function App() {
     <section className="section">
       <div className="title">
         <h2>
-          <span>/</span>Testimonial
+          <span>/</span>Testimonial 
         </h2>
       </div>
       <div className="section-center">
