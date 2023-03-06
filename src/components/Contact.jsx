@@ -143,7 +143,7 @@ import {
                   p={8}
                   color={useColorModeValue('gray.700', 'whiteAlpha.900')}
                   shadow="base">
-                  <VStack >\
+                  <VStack >
                     <form action="https://formsubmit.co/idowuolatunde32@gmail.com" method="POST">
                     <FormControl isRequired>
                       <FormLabel>Name</FormLabel>
