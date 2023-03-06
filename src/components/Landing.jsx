@@ -5,12 +5,9 @@ import Footer from './Footer'
 import About from './About'
 import Contact from './Contact'
 import Testimony from './Testimony'
-// import ImageSlider from './ImageSlider'
 import SkillSet from './SkillSet'
-// import Client from './Client'
-import Gallery from './Gallery'
+// import Gallery from './Gallery'
 import Product from './Product'
-// import Data from './Data'
 import '../../src/styles.css';
 
 
@@ -21,14 +18,11 @@ const Landing = () => {
         
           <About />
           <SkillSet />
-          {/* <Client /> */}
-          {/* <ImageSlider /> */}
-          {/* <Data /> */}
           <Gallery />
           <Product />
           <Testimony />
           <Contact />
-         
+
           <Footer />
        
     </>
