@@ -98,10 +98,6 @@ export default function CallToActionWithVideo() {
               }}>
               Meet Our Team
             </Text>
-            {/* <br />
-            <Text as={'span'} color={'red.400'}>
-              Our Team
-            </Text> */}
         </Heading>
 
       <Stack

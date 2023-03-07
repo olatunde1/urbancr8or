@@ -1,7 +1,6 @@
 import React from 'react'
 import { Card, CardHeader, CardBody, CardFooter,Text,Center,Image } from '@chakra-ui/react'
-import image from './images/architecture.png'
-// import '../skill.css'
+import image from './images/architecture.png';
 
 const SkillSet = () => {
   return (

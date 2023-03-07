@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 import logo from './images/logo.jpeg'
 import { Image } from "@chakra-ui/react";
+
 function NavBar() {
   /* Close the drawer when the user clicks outside of it */
   const [openDrawer, toggleDrawer] = useState(false);
