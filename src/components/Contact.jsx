@@ -79,6 +79,7 @@ import {
                     closeOnClick={false}
                     hasArrow>
                     <IconButton
+                      _activeLink={'urbancreators88@gmail.com'}
                       aria-label="email"
                       variant="ghost"
                       size="lg"
@@ -93,7 +94,7 @@ import {
                     />
                   </Tooltip>
   
-                  <Link href="https://www.facebook.com/horlertundey">
+                  <Link href="https://www.facebook.com/urbancr8ors">
                     <IconButton
                       aria-label="facebook"
                       variant="ghost"
@@ -108,7 +109,7 @@ import {
                     />
                   </Link>
   
-                  <Link href="#">
+                  <Link href="https://www.instagram.com/urbancr8ors">
                     <IconButton
                       aria-label="twitter"
                       variant="ghost"
@@ -144,7 +145,7 @@ import {
                   color={useColorModeValue('gray.700', 'whiteAlpha.900')}
                   shadow="base">
                   <VStack >
-                    <form action="https://formsubmit.co/idowuolatunde32@gmail.com" method="POST">
+                    <form action="https://formsubmit.co/urbancreators@gmail.com" method="POST">
                     <FormControl isRequired>
                       <FormLabel>Name</FormLabel>
   

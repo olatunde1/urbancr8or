@@ -25,7 +25,8 @@ const ReadMore = ({ children }) => {
     setIsReadMore(!isReadMore);
   };
   return (
-    <p className="text">
+    
+    <p className="text" >
       {isReadMore ? text.slice(0, 220) : text}
       <span onClick={toggleReadMore} className="read-or-hide">
         {isReadMore ? "...read more" : " show less"}
@@ -71,14 +72,18 @@ const ReadMore3 = ({ children }) => {
 
 export default function CallToActionWithVideo() {
   return (
-    <Container maxW={'6xl'} >
+    
+    <Container maxW={'6xl'}>
         <Heading
+        
             lineHeight={1.1}
             fontWeight={600}
             fontSize={{ base: '4xl', sm: '4xl', lg: '6xl' }}
             textAlign={'center'}
             >
             <Text
+           
+              id='our-team'
               as={'span'}
               position={'relative'}
               _after={{

@@ -13,7 +13,7 @@ function App() {
           <Landing />
         </>
     </ChakraProvider>
-  );
+  )
 }
 
 export default App;

@@ -29,7 +29,7 @@ import {
   export default function SplitWithImage() {
     return (
       <Box id='About' >
-        <Container maxW={'7xl'} py={12}>
+        <Container maxW={'7xl'} py={24}>
         <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
           <Stack spacing={2}>
             <Text

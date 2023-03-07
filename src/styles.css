@@ -376,6 +376,76 @@ element.style {
   }
 
   
+  #pp-nav.white .pp-nav-up, #pp-nav.white .pp-nav-down {
+    color: #fff;
+}
+
+
+#pp-nav .pp-nav-down {
+    margin-top: 3.5rem;
+}
+
+#pp-nav .pp-nav-up, #pp-nav .pp-nav-down {
+    display: none;
+    font-size: 2.1428rem;
+    cursor: pointer;
+    color: #000;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'Linearicons';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-feature-settings: "liga";
+    -moz-font-feature-settings: "liga=1";
+    -moz-font-feature-settings: "liga";
+    -ms-font-feature-settings: "liga" 1;
+    -o-font-feature-settings: "liga";
+    font-feature-settings: "liga";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    cursor: pointer;
+    background:#c5a47e;
+    border-radius: 10px;
+}
+
+::selection {
+    background-color: #c5a47e;
+    color: #fff;
+}
+
+@media (min-width: 768px){
+    .boxed {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+    
+}
+.boxed-inner {
+    position: relative;
+    padding: 0;
+}
+
+
+
+
+
+
  
 @media (max-width: 500px) {
     .moveWrap{

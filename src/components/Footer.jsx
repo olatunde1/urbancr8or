@@ -40,7 +40,7 @@ export default function SmallWithSocial() {
   return (
     <Box
       bg={useColorModeValue('gray.50', 'gray.900')}
-      color={useColorModeValue('gray.700', 'gray.200')}>
+      color={useColorModeValue('black', 'gray.200')}>
       <Container
         as={Stack}
         maxW={'6xl'}
@@ -50,6 +50,9 @@ export default function SmallWithSocial() {
         justify={{ base: 'center', md: 'space-between' }}
         align={{ base: 'center', md: 'center' }}>
         <Text>© 2022 urbanCr8tors. All rights reserved</Text>
+        <Text 
+        justify={{ base: 'center', md: 'space-between' }}
+        align={{ base: 'center', md: 'center' }}>Block 5, plot 1A, Redemption Camp Mowe Ogun State.</Text>
         <Stack direction={'row'} spacing={6}>
           <SocialButton label={'Twitter'} href={'#'}>
             <FaTwitter />

@@ -27,10 +27,10 @@ function App() {
   }, [index]);
 
   return (
-    <section className="section">
+    <section id="testimonial" className="section">
       <div className="title">
         <h2>
-          <span>/</span>Testimonial 
+          Testimonial 
         </h2>
       </div>
       <div className="section-center">

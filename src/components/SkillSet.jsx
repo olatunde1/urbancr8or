@@ -1,11 +1,13 @@
 import React from 'react'
 import { Card, CardHeader, CardBody, CardFooter,Text,Center,Image } from '@chakra-ui/react'
 import image from './images/architecture.png'
+// import '../skill.css'
 
 const SkillSet = () => {
   return (
-   <Center>
-         <Card
+   
+    <Center>
+          <Card
             className='cardSkillSet'
             direction={{ base: 'column', sm: 'row' }}
             overflow='hidden'
@@ -50,7 +52,10 @@ const SkillSet = () => {
            
         
         </Card>
-   </Center>
+    </Center>
+       
+
+   
   )
 }
 
