@@ -171,6 +171,7 @@ export default function CallToActionWithVideo() {
             <Text as={'span'} color={'#c5a47e'}>
               Ibitoye (Bsc,MED (Arch.),Arcon)
             </Text>
+            <p>CEO of Urbancr8ors</p>
         
           </Heading>
           <Text color={'gray.500'} textAlign={'justify'} lineHeight={'8'}>

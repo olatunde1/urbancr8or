@@ -1,3 +1,4 @@
+import React, {useState} from 'react';
 import {
     Container,
     SimpleGrid,
@@ -12,6 +13,24 @@ import { Rotate } from 'react-reveal';
   import Bounce from 'react-reveal/Bounce';
   import Slide from 'react-reveal/Slide';
 
+
+  const ReadMore = ({ children }) => {
+    const text = children;
+    const [isReadMore, setIsReadMore] = useState(true);
+    const toggleReadMore = () => {
+      setIsReadMore(!isReadMore);
+    };
+    return (
+      
+      <p>
+        {isReadMore ? text.slice(0, 685) : text}
+        <span onClick={toggleReadMore} className="read-or-hide">
+          {isReadMore ? "...read more" : " show less"}
+        </span>
+      </p>
+      
+    );
+  };
 
   const Feature = ({ text, icon, iconBg }) => {
     return (
@@ -54,7 +73,10 @@ import { Rotate } from 'react-reveal';
                 lineHeight={'1.8'}
                 color={'white'} fontSize={{base:'13px', md:'xl'}}
                 textAlign='justify'>
+                  <ReadMore>
                   Urbancr8ors ltd is a team of built environment professionals who are determined to take the industry to next levels using contemporary innovations and 21st century creativities. We are experts in designing and building smart homes, hotels, resorts and sport complexes and more. We are a team trained in construction management, land development and real estate. With the oldest member having over 12 years of experience in the field. At Urbancr8ors, We offer premium Avant guard construction services in the contemporary way. To generate your building project idea, we use post modern design tools such as Autodesk suite, google sketchup, Rhinocerous and Artificial Intelligence (AI). This includes 5D and 3D details of what your building will actually look like, From the façade, interior design, painting, and landscape. At Urban vr8ors ltd, you dream it, we build it..........
+
+                  </ReadMore>
             </Text>
           </Slide>
            
