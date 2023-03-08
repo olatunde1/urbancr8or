@@ -44,14 +44,14 @@ import {
                     <ModalHeader>{modalHeader}</ModalHeader>
                     <ModalCloseButton />
                     <ModalBody>
-                    {modalBody}
+                   
                     </ModalBody>
 
                     <ModalFooter>
                         <Button colorScheme='blue' mr={3} onClick={onClose}>
                         Close
                         </Button>
-                        <Button variant='ghost'>Secondary Action</Button>
+                      
                     </ModalFooter>
                     </ModalContent> 
                 </Modal>
@@ -83,7 +83,7 @@ import {
                         <Button colorScheme='blue' mr={3} onClick={onClose}>
                         Close
                         </Button>
-                        <Button variant='ghost'>Secondary Action</Button>
+                       
                     </ModalFooter>
                     </ModalContent> 
                 </Modal>
@@ -115,7 +115,7 @@ import {
                         <Button colorScheme='blue' mr={3} onClick={onClose}>
                         Close
                         </Button>
-                        <Button variant='ghost'>Secondary Action</Button>
+                        
                     </ModalFooter>
                     </ModalContent> 
                 </Modal>
@@ -147,7 +147,7 @@ import {
                         <Button colorScheme='blue' mr={3} onClick={onClose}>
                         Close
                         </Button>
-                        <Button variant='ghost'>Secondary Action</Button>
+                       
                     </ModalFooter>
                     </ModalContent> 
                 </Modal>
@@ -179,7 +179,7 @@ import {
                         <Button colorScheme='blue' mr={3} onClick={onClose}>
                         Close
                         </Button>
-                        <Button variant='ghost'>Secondary Action</Button>
+                      
                     </ModalFooter>
                     </ModalContent> 
                 </Modal>
@@ -211,7 +211,7 @@ import {
                         <Button colorScheme='blue' mr={3} onClick={onClose}>
                         Close
                         </Button>
-                        <Button variant='ghost'>Secondary Action</Button>
+                       
                     </ModalFooter>
                     </ModalContent> 
                 </Modal>
@@ -243,7 +243,7 @@ import {
                         <Button colorScheme='blue' mr={3} onClick={onClose}>
                         Close
                         </Button>
-                        <Button variant='ghost'>Secondary Action</Button>
+                       
                     </ModalFooter>
                     </ModalContent> 
                 </Modal>
@@ -261,8 +261,8 @@ export default function Gallery() {
     return (
       <div className="App" >
         <CustomModal
-          showModalButtonText="View"
-          modalHeader="Edit Modal"
+          showModalButtonText="View Details"
+          modalHeader="Design Full Details"
           modalBody="Edit Modal"
         />
         {/* <CustomModal
