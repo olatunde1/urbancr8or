@@ -14,8 +14,8 @@ import '../../src/styles.css';
 const Landing = () => {
   return ( 
     <>
-        <NavBar position="fixed" minW='100%'/>
-        <>
+        <NavBar />
+  
           <About />
           <SkillSet />
           <Gallery />
@@ -24,7 +24,7 @@ const Landing = () => {
           <Contact />
 
           <Footer />
-        </>
+   
           
        
     </>

@@ -34,7 +34,8 @@ import {
           <Stack spacing={2}>
             <Text
               className='arch'
-          
+              color={'#c5a47e'}
+              fontSize={{base:'4xl', md:'6xl'}}
               py={4}
               >
               Architecture <br /> and Design

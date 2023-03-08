@@ -108,11 +108,12 @@ html{
 }
 
 #About{
-        background-image: linear-gradient(0deg, rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(./components/images/bkkk.jpg);
+        background-image: linear-gradient(0deg, rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(./components/images/bg12.jpg);
         background-position: 50% 50%;
         background-attachment: fixed;
         background-size: cover;
         background-repeat: no-repeat;
+        /* background-color: #000; */
         display: block;
         object-fit: cover;
 }
