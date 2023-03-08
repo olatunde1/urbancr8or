@@ -94,7 +94,7 @@ import {
                     />
                   </Tooltip>
   
-                  <Link href="https://www.facebook.com/urbancr8ors">
+                  <Link href="https://www.facebook.com/arc.obafemiibitoye?mibextid=ZbWKwL">
                     <IconButton
                       aria-label="facebook"
                       variant="ghost"
@@ -109,9 +109,9 @@ import {
                     />
                   </Link>
   
-                  <Link href="https://www.instagram.com/urbancr8ors">
+                  <Link href="https://www.instagram.com/p/CfoCsdpsSto/?igshid=YmMyMTA2M2Y=">
                     <IconButton
-                      aria-label="twitter"
+                      aria-label="instagram"
                       variant="ghost"
                       size="lg"
                       icon={<FaInstagram size="28px" />}

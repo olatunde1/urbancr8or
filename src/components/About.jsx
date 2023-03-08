@@ -44,7 +44,7 @@ import { Rotate } from 'react-reveal';
                 fontSize={{base:'4xl', md:'6xl'}}
                 py={4}
                 >
-                Architecture <br /> and Design
+               Urbancr8ors
               </Text>
           </Bounce>
             
@@ -52,9 +52,9 @@ import { Rotate } from 'react-reveal';
             <Text
                 fontFamily={'Roboto Slab , serif'}
                 lineHeight={'1.8'}
-                color={'white'} fontSize={'xl'}>
-                  For each project, we establish relationships with partners who we know will  help us create added value for your project. 
-                  As well as bringing together the public and private sectors, we make sector-overarching links to gather knowledge and to learn from each other.
+                color={'white'} fontSize={{base:'13px', md:'xl'}}
+                textAlign='justify'>
+                  Urbancr8ors ltd is a team of built environment professionals who are determined to take the industry to next levels using contemporary innovations and 21st century creativities. We are experts in designing and building smart homes, hotels, resorts and sport complexes and more. We are a team trained in construction management, land development and real estate. With the oldest member having over 12 years of experience in the field. At Urbancr8ors, We offer premium Avant guard construction services in the contemporary way. To generate your building project idea, we use post modern design tools such as Autodesk suite, google sketchup, Rhinocerous and Artificial Intelligence (AI). This includes 5D and 3D details of what your building will actually look like, From the façade, interior design, painting, and landscape. At Urban vr8ors ltd, you dream it, we build it..........
             </Text>
           </Slide>
            

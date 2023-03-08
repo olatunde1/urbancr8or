@@ -174,18 +174,15 @@ export default function CallToActionWithVideo() {
         
           </Heading>
           <Text color={'gray.500'} textAlign={'justify'} lineHeight={'8'}>
-            <ReadMore>Arc Obafemi A. Ibitoye (F4689) is a registered Architect with Architect Registration Council of Nigeria (ARCON). 
-          He is a Proactive professional with 12years of experience in Academics and the built environment industry. 
-          He holds Bachelor of Technology and Masters of Environmental Design in Architecture from Ladoke Akintola 
-          University of  Technology, Ogbomoso and University of Lagos respectively. Ibitoye worked with PRODECO International; 
-          a subsidiary of Intel's Oil and gas where he coordinated housing and hospitality projects development in Portharcourt 
-          and Lagos State Nigeria. At PRODECO he contributed in the Auditing of the Concept design for Eko Energy Estate, 
-          Eko Atlantic City. He teaches Architectural Conceptualization, Architectural Design and Building Construction 
-          Methodology at both B.Sc and M.Sc Levels in Caleb University, Lagos. He was formerly Ag. head, department of 
-          Architecture, Redeemers College of Technology (RECTEM). Ibitoye is a PhD Candidate at Caleb University who is
-          interested in using architecture to solve social needs and create sustainable functional shelter with the 
-          integration of locally induced building materials. He is a Co founder of Urbancr8ors; a property development 
-          Company based in Lagos and Ogun state Nigeria.</ReadMore>
+            <ReadMore>Arc Obafemi A. Ibitoye (F4689), is a 35 year old goal-driven architect. He has had his fair share of humble beginnings and steady progress.
+                He holds a B.Tech in Architecture from Ladoke Akintola University of Technology, Ogbomoso. And a Masters of Environmental Design in Architecture, from the University of Lagos.
+                He is a registered architect with the Architect Registration Council of Nigeria (ARCON). A badge only a few of his colleagues carry with pride.
+                He is a proactive AEC (Architecture, Engineering, Construction) professional. With 12 years of experience in the built environment industry and also in academics. It is no wonder he is a mentor to many younger architects.
+                He worked with PRODECO International; a subsidiary of Intel's oil and gas. In Portharcourt and Lagos State Nigeria, he coordinated the development of housing and hospitality projects. At PRODECO he contributed to auditing the concept design of Eko Energy Estate, Eko Atlantic City.
+                He teaches Architectural Conceptualization, Architectural Design and Building Construction Methodology at both B.Sc and M.Sc Levels at Caleb University, Lagos.
+                He was an Ag. Head, Department of Architecture, Redeemers College of Technology (RECTEM). Ibitoye is a PhD Candidate at Caleb University, Lagos, Nigeria.
+                All these sum him up to be a professional whose sole interest is to use architecture to solve social needs. And in so doing, create sustainable functional spaces. He has shown dedication to his work with a rich portfolio containing at least 500 designs. With over 50 completed across Nigeria and a lot more still under construction. You can reach him HERE
+            </ReadMore>
           
           </Text>
           <Stack
