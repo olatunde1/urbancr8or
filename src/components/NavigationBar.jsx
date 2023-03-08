@@ -3,6 +3,7 @@ import styled from "styled-components";
 import logo from './images/logo.jpeg'
 import { Image } from "@chakra-ui/react";
 
+
 function NavBar() {
   /* Close the drawer when the user clicks outside of it */
   const [openDrawer, toggleDrawer] = useState(false);
@@ -34,6 +35,9 @@ function NavBar() {
       </HamburgerButton.Wrapper>
 
       <Navbar.Items ref={drawerRef} openDrawer={openDrawer}>
+        <Navbar.Item>
+          <a href="#pictureslider">Home</a>
+        </Navbar.Item>
         <Navbar.Item>
           <a href="#About">About</a>
         </Navbar.Item>
@@ -123,6 +127,7 @@ const Navbar = {
     }
   `
 };
+
 
 const HamburgerButton = {
   Wrapper: styled.button`

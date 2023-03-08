@@ -7,6 +7,7 @@ import SkillSet from './SkillSet'
 import Gallery from './Gallery'
 import NavBar from './NavigationBar'
 import Product from './Product'
+import PictureSlider from './PictureSlider'
 import '../../src/styles.css';
 
 
@@ -14,16 +15,16 @@ import '../../src/styles.css';
 const Landing = () => {
   return ( 
     <>
-        <NavBar />
-  
-          <About />
-          <SkillSet />
-          <Gallery />
-          <Product />
-          <Testimony />
-          <Contact />
+      <NavBar />
+      <PictureSlider />
+      <About />
+      <SkillSet />
+      <Gallery />
+      <Product />
+      <Testimony />
+      <Contact />
 
-          <Footer />
+      <Footer />
    
           
        

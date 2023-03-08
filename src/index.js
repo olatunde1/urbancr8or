@@ -1,7 +1,7 @@
 import React, { StrictMode } from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { BrowserRouter } from "react-router-dom";
-import './components/styles.css';
+import '../src/styles.css'
 import App from './App';
 
 const container = document.getElementById('root');
