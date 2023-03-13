@@ -261,7 +261,7 @@ export default function Gallery() {
     return (
       <div className="App" >
         <CustomModal
-          showModalButtonText="View Details"
+        //   showModalButtonText="View Details"
           modalHeader="Design Full Details"
           modalBody="Edit Modal"
         />

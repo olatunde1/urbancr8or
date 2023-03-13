@@ -23,7 +23,10 @@ const SkillSet = () => {
               <AccordionItem>
                 <h2>
                   <AccordionButton>
-                    <Box as="span" flex='1' textAlign='left'>
+                    <Box as="span" flex='1' textAlign='left' fontSize={'20px'}
+                        paddingTop={'16px'}
+                        paddingBottom={'16px'}
+                    >
                       Architecture
                     </Box>
                     <AccordionIcon />
@@ -43,7 +46,10 @@ const SkillSet = () => {
               <AccordionItem>
                 <h2>
                   <AccordionButton>
-                    <Box as="span" flex='1' textAlign='left'>
+                    <Box as="span" flex='1' textAlign='left' fontSize={'20px'}
+                        paddingTop={'16px'}
+                        paddingBottom={'16px'}
+                    >
                        Design and build
                     </Box>
                     <AccordionIcon />
@@ -62,7 +68,10 @@ const SkillSet = () => {
               <AccordionItem>
                 <h2>
                   <AccordionButton>
-                    <Box as="span" flex='1' textAlign='left'>
+                    <Box as="span" flex='1' textAlign='left' fontSize={'20px'}
+                        paddingTop={'16px'}
+                        paddingBottom={'16px'}
+                    >
                     Investment
                     </Box>
                     <AccordionIcon />
