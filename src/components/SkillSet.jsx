@@ -5,12 +5,11 @@ import {
     AccordionButton,
     AccordionPanel,
     AccordionIcon,
-    Container,
+    Text,
     Box,
     Stack,
   } from '@chakra-ui/react'
 // import { Card, CardHeader, CardBody, CardFooter,Text,Center,Image } from '@chakra-ui/react'
-import image from './images/architecture.png';
 
 const SkillSet = () => {
   return (
@@ -19,6 +18,12 @@ const SkillSet = () => {
         width={{base:'100%', md:'90%'}}
         margin={'5rem auto'}
     >
+            <Text
+                textAlign={'center'}
+                fontSize={'32px'}
+                fontWeight={'700'}
+                paddingBottom={'50px'}
+            >Our Skill Set</Text>
             <Accordion allowMultiple color={'#000000'}>
               <AccordionItem>
                 <h2>

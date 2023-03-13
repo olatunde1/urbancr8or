@@ -35,7 +35,7 @@ import {
                 <div className="text-details fadeIn-bottom fadeIn-left">
                     <h1>Bullidion Pent</h1>
                     <p>Price: $4,000,000,000</p>
-                    <button  onClick={onOpen}> {showModalButtonText}</button>
+                    {/* <button  onClick={onOpen}> {showModalButtonText}</button> */}
                     <Modal isOpen={isOpen} onClose={onClose}>
                     <ModalOverlay />
     
@@ -67,7 +67,7 @@ import {
                 <div className="text-details fadeIn-bottom fadeIn-left">
                     <h1>Bullidion Pent</h1>
                     <p>Price: $4,000,000,000</p>
-                    <button  onClick={onOpen}> {showModalButtonText}</button>
+                    {/* <button  onClick={onOpen}> {showModalButtonText}</button> */}
                     <Modal isOpen={isOpen} onClose={onClose}>
                     <ModalOverlay />
     
@@ -99,7 +99,7 @@ import {
                 <div className="text-details fadeIn-bottom fadeIn-left">
                     <h1>Bullidion Pent</h1>
                     <p>Price: $4,000,000,000</p>
-                    <button  onClick={onOpen}> {showModalButtonText}</button>
+                    {/* <button  onClick={onOpen}> {showModalButtonText}</button> */}
                     <Modal isOpen={isOpen} onClose={onClose}>
                     <ModalOverlay />
     
@@ -131,7 +131,7 @@ import {
                 <div className="text-details fadeIn-bottom fadeIn-left">
                     <h1>Bullidion Pent</h1>
                     <p>Price: $4,000,000,000</p>
-                    <button  onClick={onOpen}> {showModalButtonText}</button>
+                    {/* <button  onClick={onOpen}> {showModalButtonText}</button> */}
                     <Modal isOpen={isOpen} onClose={onClose}>
                     <ModalOverlay />
     
@@ -163,7 +163,7 @@ import {
                 <div className="text-details fadeIn-bottom fadeIn-left">
                     <h1>Bullidion Pent</h1>
                     <p>Price: $4,000,000,000</p>
-                    <button  onClick={onOpen}> {showModalButtonText}</button>
+                    {/* <button  onClick={onOpen}> {showModalButtonText}</button> */}
                     <Modal isOpen={isOpen} onClose={onClose}>
                     <ModalOverlay />
     
@@ -195,7 +195,7 @@ import {
                 <div className="text-details fadeIn-bottom fadeIn-left">
                     <h1>Bullidion Pent</h1>
                     <p>Price: $4,000,000,000</p>
-                    <button  onClick={onOpen}> {showModalButtonText}</button>
+                    {/* <button  onClick={onOpen}> {showModalButtonText}</button> */}
                     <Modal isOpen={isOpen} onClose={onClose}>
                     <ModalOverlay />
     
@@ -227,7 +227,7 @@ import {
                 <div className="text-details fadeIn-bottom fadeIn-left">
                     <h1>Bullidion Pent</h1>
                     <p>Price: $4,000,000,000</p>
-                    <button  onClick={onOpen}> {showModalButtonText}</button>
+                    {/* <button  onClick={onOpen}> {showModalButtonText}</button> */}
                     <Modal isOpen={isOpen} onClose={onClose}>
                     <ModalOverlay />
     
