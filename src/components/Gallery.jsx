@@ -1,11 +1,13 @@
 import React from 'react'
-import pic1 from './images/2.jpg'
-import pic2 from './images/3.jpg'
-import pic3 from './images/5.jpg'
-import pic4 from './images/7.png'
-import pic5 from './images/slid3.jpg'
-import pic6 from './images/slide3.jpg'
-import pic7 from './images/8.png'
+import pic1 from './images/Gallery/G1.jpg'
+import pic2 from './images/Gallery/G2.jpg'
+import pic3 from './images/Gallery/G3.jpg'
+import pic4 from './images/Gallery/G4.jpg'
+import pic5 from './images/Gallery/G5.jpg'
+import pic6 from './images/Gallery/G6.jpg'
+import pic7 from './images//Gallery/G7.jpg'
+import pic8 from './images//Gallery/G8.jpg'
+import pic9 from './images//Gallery/G9.jpg'
 import {
     Modal,
     ModalOverlay,
@@ -65,7 +67,7 @@ import {
                     <img src={pic2} alt="galleryImages" class=""  />
                 </div>
                 <div className="text-details fadeIn-bottom fadeIn-left">
-                    <h1>Bullidion Pent</h1>
+                    <h1>Eagles Pent</h1>
                     <p>Price: $4,000,000,000</p>
                     {/* <button  onClick={onOpen}> {showModalButtonText}</button> */}
                     <Modal isOpen={isOpen} onClose={onClose}>
@@ -153,7 +155,39 @@ import {
                 </Modal>
 
                 </div>
-            </div>   
+            </div>  
+            <div class="pics">
+                <div className="overlayText">
+                </div>
+                <div class="css-1gzxeik">
+                    <img src={pic9} alt="galleryImages" class=""  />
+                </div>
+                <div className="text-details fadeIn-bottom fadeIn-left">
+                    <h1>Bullidion Pent</h1>
+                    <p>Price: $4,000,000,000</p>
+                    {/* <button  onClick={onOpen}> {showModalButtonText}</button> */}
+                    <Modal isOpen={isOpen} onClose={onClose}>
+                    <ModalOverlay />
+    
+  
+                    <ModalContent>
+                    <ModalHeader>{modalHeader}</ModalHeader>
+                    <ModalCloseButton />
+                    <ModalBody>
+                    {modalBody}
+                    </ModalBody>
+
+                    <ModalFooter>
+                        <Button colorScheme='blue' mr={3} onClick={onClose}>
+                        Close
+                        </Button>
+                       
+                    </ModalFooter>
+                    </ModalContent> 
+                </Modal>
+
+                </div>
+            </div> 
             <div class="pics">
                 <div className="overlayText">
                 </div>
@@ -250,6 +284,39 @@ import {
 
                 </div>
             </div>
+            <div class="pics">
+                <div className="overlayText">
+                </div>
+                <div class="css-1gzxeik">
+                    <img src={pic8} alt="galleryImages" class=""  />
+                </div>
+                <div className="text-details fadeIn-bottom fadeIn-left">
+                    <h1>Bullidion Pent</h1>
+                    <p>Price: $4,000,000,000</p>
+                    {/* <button  onClick={onOpen}> {showModalButtonText}</button> */}
+                    <Modal isOpen={isOpen} onClose={onClose}>
+                    <ModalOverlay />
+    
+  
+                    <ModalContent>
+                    <ModalHeader>{modalHeader}</ModalHeader>
+                    <ModalCloseButton />
+                    <ModalBody>
+                    {modalBody}
+                    </ModalBody>
+
+                    <ModalFooter>
+                        <Button colorScheme='blue' mr={3} onClick={onClose}>
+                        Close
+                        </Button>
+                       
+                    </ModalFooter>
+                    </ModalContent> 
+                </Modal>
+
+                </div>
+            </div>
+           
                           
         </div>
     </div>

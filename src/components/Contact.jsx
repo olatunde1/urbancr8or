@@ -60,6 +60,7 @@ import {
           <Box>
             <VStack spacing={{ base: 4, md: 8, lg: 20 }}>
               <Heading
+                
                 fontSize={{
                   base: '2xl',
                   md: '5xl',

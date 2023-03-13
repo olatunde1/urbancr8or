@@ -24,7 +24,7 @@ const SkillSet = () => {
                 fontWeight={'700'}
                 paddingBottom={'50px'}
             >Our Skill Set</Text>
-            <Accordion allowMultiple color={'#000000'}>
+            <Accordion allowToggle>
               <AccordionItem>
                 <h2>
                   <AccordionButton>
@@ -38,7 +38,7 @@ const SkillSet = () => {
                   </AccordionButton>
                 </h2>
                 <AccordionPanel pb={4} textAlign='justify' letterSpacing={'normal'} fontSize={'16px'}>
-                We are Architects without team leaders been fully registered with Architect 
+                We are Architects with our team leaders been fully registered with Architect 
                 registration council of Nigeria. We use pragmatic design tools to design vanguard
                  buildings with postmodern innovations and creativities. Our design philosophy 
                  incorporates the use of modern and postmodern architectural characters in designing 

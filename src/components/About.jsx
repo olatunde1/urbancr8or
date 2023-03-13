@@ -5,19 +5,12 @@ import {
     Flex,
     Box,
     Text,
-    Accordion,
-    AccordionItem,
-    AccordionButton,
-    AccordionPanel,
-    AccordionIcon,
     Image,
     Stack,
-    StackDivider,
-    useColorModeValue,
   } from '@chakra-ui/react';
   import { MinusIcon,AddIcon } from '@chakra-ui/icons';
 // import { Rotate } from 'react-reveal';
-import image1 from './images/slide/D17.png'
+  import image1 from './images/slide/D17.png'
   import Bounce from 'react-reveal/Bounce';
   import Slide from 'react-reveal/Slide';
 

@@ -179,7 +179,7 @@ export default function CallToActionWithVideo() {
         
           </Heading>
           <Text color={'gray.500'} textAlign={'justify'} lineHeight={'8'}>
-            <ReadMore>Arc Obafemi A. Ibitoye (F4689), is a 35 year old goal-driven architect. He has had his fair share of humble beginnings and steady progress.
+            <ReadMore>Arc Obafemi A. Ibitoye (F4689), is a goal-driven architect. He has had his fair share of humble beginnings and steady progress.
                 He holds a B.Tech in Architecture from Ladoke Akintola University of Technology, Ogbomoso. And a Masters of Environmental Design in Architecture, from the University of Lagos.
                 He is a registered architect with the Architect Registration Council of Nigeria (ARCON). A badge only a few of his colleagues carry with pride.
                 He is a proactive AEC (Architecture, Engineering, Construction) professional. With 12 years of experience in the built environment industry and also in academics. It is no wonder he is a mentor to many younger architects.

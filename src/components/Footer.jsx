@@ -49,7 +49,7 @@ export default function SmallWithSocial() {
         spacing={4}
         justify={{ base: 'center', md: 'space-between' }}
         align={{ base: 'center', md: 'center' }}>
-        <Text>© 2022 urbanCr8tors. All rights reserved</Text>
+        <Text>© 2022 urbanCr8ors. All rights reserved</Text>
         <Text 
         justify={{ base: 'center', md: 'space-between' }}
         align={{ base: 'center', md: 'center' }}>Block 5, plot 1A, Redemption Camp Mowe Ogun State.</Text>
