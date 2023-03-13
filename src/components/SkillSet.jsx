@@ -37,7 +37,7 @@ const SkillSet = () => {
                     <AccordionIcon />
                   </AccordionButton>
                 </h2>
-                <AccordionPanel pb={4} textAlign='justify' letterSpacing={'normal'}>
+                <AccordionPanel pb={4} textAlign='justify' letterSpacing={'normal'} fontSize={'16px'}>
                 We are Architects without team leaders been fully registered with Architect 
                 registration council of Nigeria. We use pragmatic design tools to design vanguard
                  buildings with postmodern innovations and creativities. Our design philosophy 
@@ -60,7 +60,7 @@ const SkillSet = () => {
                     <AccordionIcon />
                   </AccordionButton>
                 </h2>
-                <AccordionPanel pb={4} textAlign='justify'>
+                <AccordionPanel pb={4} textAlign='justify' fontSize={'16px'}>
                 Design and build: At Urbancr8ors, we design, we build, we install and we manage. 
                 We provide support in land acquisition, design and construction till we give you 
                 the keys to your new house. Meaning, all you have to do is tell us your dream location
@@ -82,7 +82,7 @@ const SkillSet = () => {
                     <AccordionIcon />
                   </AccordionButton>
                 </h2>
-                <AccordionPanel pb={4} textAlign='justify'>
+                <AccordionPanel pb={4} textAlign='justify' fontSize={'16px'}>
                 You can enjoy our fast-rising international network by investing in Urbancr8ors. 
                 We are opened to land banking investment, property and proptech development, 
                 realestate and JV with High return on your investment.  at Urbancr8ors, 
