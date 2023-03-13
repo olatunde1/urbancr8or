@@ -82,14 +82,23 @@ import image1 from './images/slide/D17.png'
                 color={'white'} fontSize={{base:'14px', md:'xl'}}
                 textAlign='justify'>
                   <ReadMore>
-                  Urbancr8ors ltd is a team of built environment professionals who are determined to take the industry to next levels using contemporary innovations and 21st century creativities. We are experts in designing and building smart homes, hotels, resorts and sport complexes and more. We are a team trained in construction management, land development and real estate. With the oldest member having over 12 years of experience in the field. At Urbancr8ors, We offer premium Avant guard construction services in the contemporary way. To generate your building project idea, we use post modern design tools such as Autodesk suite, google sketchup, Rhinocerous and Artificial Intelligence (AI). This includes 5D and 3D details of what your building will actually look like, From the façade, interior design, painting, and landscape. At Urban vr8ors ltd, you dream it, we build it..........
+                  Urbancr8ors ltd is a team of built environment professionals who are determined
+                   to take the industry to next levels using contemporary innovations and 21st century
+                    creativities. We are experts in designing and building smart homes, hotels, resorts 
+                    and sport complexes and more. We are a team trained in construction management, land
+                     development and real estate. With the oldest member having over 12 years of experience
+                      in the field. At Urbancr8ors, We offer premium Avant guard construction services in the
+                       contemporary way. To generate your building project idea, we use post modern design tools
+                        such as Autodesk suite, google sketchup, Rhinocerous and Artificial Intelligence (AI). 
+                        This includes 5D and 3D details of what your building will actually look like, From the façade,
+                         interior design, painting, and landscape. At Urban vr8ors ltd, you dream it, we build it.
 
                   </ReadMore>
             </Text>
           </Slide>
            
-            <Stack>
-              <Accordion allowMultiple color={'#ffffff'}>
+            {/* <Stack>
+            <Accordion allowMultiple color={'#ffffff'}>
               <AccordionItem>
                 <h2>
                   <AccordionButton>
@@ -99,8 +108,8 @@ import image1 from './images/slide/D17.png'
                     <AccordionIcon />
                   </AccordionButton>
                 </h2>
-                <AccordionPanel pb={4} textAlign='justify'>
-                We are Architects with out team leaders been fully registered with Architect 
+                <AccordionPanel pb={4} textAlign='justify' letterSpacing={'normal'}>
+                We are Architects without team leaders been fully registered with Architect 
                 registration council of Nigeria. We use pragmatic design tools to design vanguard
                  buildings with postmodern innovations and creativities. Our design philosophy 
                  incorporates the use of modern and postmodern architectural characters in designing 
@@ -148,13 +157,12 @@ import image1 from './images/slide/D17.png'
                 from any unfortunate events.
                 </AccordionPanel>
               </AccordionItem>
-
             </Accordion>
-            </Stack>
+            </Stack> */}
           </Stack>
-          <Flex>
-            <Image src={image1} width={'100%'} />
-          </Flex>
+          <Stack>
+            <Image  src={image1} height={{md:'80%'}} pic />
+          </Stack>
         </SimpleGrid>
         
       </Container>
