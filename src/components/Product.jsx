@@ -146,13 +146,14 @@ export default function CallToActionWithVideo() {
               h={'400px'}
               src={team}
             />
+           
           </Box>
         </Flex>
         <Stack flex={1} spacing={{ base: 5, md: 10 }}>
           <Heading
             lineHeight={1.1}
             fontWeight={600}
-            fontSize={{ base: '2xl', sm: '4xl', lg: '3xl' }}>
+            fontSize={{ base: '2xl', sm: '4xl', lg: '3xl', md:'12px' }}>
             <Text
               as={'span'}
               position={'relative'}
@@ -171,7 +172,10 @@ export default function CallToActionWithVideo() {
             <Text as={'span'} color={'#c5a47e'}>
               Ibitoye (Bsc,MED (Arch.),Arcon)
             </Text>
-            <p>CEO of Urbancr8ors</p>
+            <p style={{
+              fontSize:'18px',
+              lineHeight:'1.9'
+            }}>CEO of Urbancr8ors</p>
         
           </Heading>
           <Text color={'gray.500'} textAlign={'justify'} lineHeight={'8'}>
@@ -214,7 +218,7 @@ export default function CallToActionWithVideo() {
         
       </Stack>
    
-      <Stack
+      {/* <Stack
         align={'center'}
         spacing={{ base: 8, md: 10 }}
         py={{ base: 2, md: 2 }}
@@ -246,7 +250,6 @@ export default function CallToActionWithVideo() {
               aria-label={'Play Button'}
               variant={'ghost'}
               _hover={{ bg: 'transparent' }}
-              // icon={<PlayIcon w={12} h={12} />}
               size={'lg'}
               color={'white'}
               position={'absolute'}
@@ -300,30 +303,13 @@ export default function CallToActionWithVideo() {
           <Stack
             spacing={{ base: 4, sm: 6 }}
             direction={{ base: 'column', sm: 'row' }}>
-            {/* <Button
-              rounded={'full'}
-              size={'lg'}
-              fontWeight={'normal'}
-              px={6}
-              colorScheme={'red'}
-              bg={'red.400'}
-              _hover={{ bg: 'red.500' }}>
-              Get started
-            </Button>
-            <Button
-              rounded={'full'}
-              size={'lg'}
-              fontWeight={'normal'}
-              px={6}
-              leftIcon={<PlayIcon h={4} w={4} color={'gray.300'} />}>
-              How It Works
-            </Button> */}
+            
           </Stack>
         </Stack>
         
-      </Stack>
+      </Stack> */}
     
-      <Stack
+      {/* <Stack
         align={'center'}
         spacing={{ base: 8, md: 10 }}
         py={{ base: 20, md: 28 }}
@@ -355,7 +341,6 @@ export default function CallToActionWithVideo() {
               aria-label={'Play Button'}
               variant={'ghost'}
               _hover={{ bg: 'transparent' }}
-              // icon={<PlayIcon w={12} h={12} />}
               size={'lg'}
               color={'white'}
               position={'absolute'}
@@ -388,7 +373,6 @@ export default function CallToActionWithVideo() {
                 position: 'absolute',
                 bottom: 1,
                 left: 0,
-                // bg: 'red.400',
                 zIndex: -1,
               }}>
               Arc Opadokun,
@@ -408,28 +392,11 @@ export default function CallToActionWithVideo() {
           <Stack
             spacing={{ base: 4, sm: 6 }}
             direction={{ base: 'column', sm: 'row' }}>
-            {/* <Button
-              rounded={'full'}
-              size={'lg'}
-              fontWeight={'normal'}
-              px={6}
-              colorScheme={'red'}
-              bg={'red.400'}
-              _hover={{ bg: 'red.500' }}>
-              Get started
-            </Button>
-            <Button
-              rounded={'full'}
-              size={'lg'}
-              fontWeight={'normal'}
-              px={6}
-              leftIcon={<PlayIcon h={4} w={4} color={'gray.300'} />}>
-              How It Works
-            </Button> */}
+           
           </Stack>
         </Stack>
        
-      </Stack>
+      </Stack> */}
       
     </Container>
   );
